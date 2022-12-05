@@ -1,34 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Montserrat:wght@300;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+/* 
+font-family: 'League Spartan', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Source Sans Pro', sans-serif;
+ */
+
 .App {
-  text-align: center;
+	width: 100%;
+	height: 100%;
 }
 
 .header {
-  background-color: antiquewhite;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 10vh;
+  background-color: #4c516d;
+  color: aliceblue;
 }
 
 .logo {
-  height: 64px;
-  width: auto;
-  background: none;
+	margin-left: 2.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .nav-links {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1rem;
-  margin-right: 2.5rem;
+	font-family: 'League Spartan', sans-serif;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1rem;
+	margin-right: 2.5rem;
 }
 
 .nav-link {
-  text-decoration: none;
-  color: blue;
+	text-decoration: none;
+	color: aliceblue
 }
 
 .active {
+	text-decoration: none;
+	color: coral;
+}
+
+.home {
+	width: 100%;
+	height: 90vh;
+}
+.hero {
+	background: url('./images/background-destination-desktop.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: inherit;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'Playfair Display', serif;
+	font-weight: 900;
+	gap: 5rem;
+}
+
+.hero-text-container {
+	margin-left: 5rem;
+}
+
+.primary-text {
+	font-size: 2.5rem;
+}
+.profile-photo {
+  height: 200px;
+	width: auto;
+	border-radius: 50%;
+}
+.secondary-text {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+	font-size: 1.25rem;
+}
+
+.hero-right {
+	height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+.links-wrapper {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 2rem;
+}
+
+.center-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+	justify-content: center;
+  align-items: center;
+	background-color: #4c516d;
+	color: aliceblue;
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
-  color: red;
+  text-transform: capitalize;
+  padding: 0.65rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1.12rem;
+  font-weight: 400;
+
+}
+
+.fa-github {
+  font-size: 1.25rem;
+  color: aliceblue;
 }
