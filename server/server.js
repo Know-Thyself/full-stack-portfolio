@@ -8,10 +8,13 @@ const __dirname = path.dirname(__filename);
 const app = express();
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 const PORT = process.env.PORT || 4000;
+import getProjects from './router/projects.js';
 
 app.get('/api', (req, res) => {
 	res.json({ message: 'Server is ready!' });
 });
+
+app.use('/projects', getProjects);
 
 app.listen(PORT, () => {
 	console.log(

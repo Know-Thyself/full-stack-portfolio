@@ -1,21 +1,6 @@
-import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { fa, brand, github } from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => {
-	const [data, setData] = useState(null);
-
-	useEffect(() => {
-		fetch('/api')
-			.then((res) => res.json())
-			.then((data) => {
-				console.log(data);
-				setData(data);
-			})
-			.catch((error) => console.error(error));
-	}, []);
-  console.log(data);
 	return (
 		<div className='home'>
 			<section className='hero'>
@@ -27,7 +12,10 @@ const Home = () => {
 						alt=''
 					/>
 					<h3 className='secondary-text'>
-						Biruk here, I'm a passionate Full Stack Web Developer...
+						Biruk here, If you are looking to hire a passionate, logical
+						thinker, problem solver, team player, great communicator and skillful Software Engineer
+						for a frontend, backend or full stack web development role, you have
+						come to the right place!
 					</h3>
 					<div className='links-wrapper'>
 						<a
@@ -44,7 +32,7 @@ const Home = () => {
 					</div>
 				</div>
 				<div className='hero-right'>
-				<h3>Some content here</h3>
+					<h3>Some content here</h3>
 				</div>
 			</section>
 		</div>
