@@ -11,7 +11,7 @@ const Router = () => {
 		fetch('/projects')
 			.then((res) => res.json())
 			.then((data) => {
-				setProjects(data[0].content.portfolio.projects);
+				setProjects(data[0].content.projects);
 			})
 			.catch((error) => console.error(error));
 	}, []);
