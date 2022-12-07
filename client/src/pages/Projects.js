@@ -1,14 +1,30 @@
-const Projects = ({ projects }) => {
+import { useNavigate } from 'react-router-dom';
+
+const Projects = ({ projects, setClickedProject }) => {
+	const navigate = useNavigate();
 	const truncate = (str, n) => {
 		return str.length > n ? str.slice(0, n - 1) + ' ...' : str;
 	};
-	console.log(projects);
+
+	const handleClick = (e) => {
+		let selected = projects[e.currentTarget.id];
+		setClickedProject(selected);
+		if (e.target.innerText !== 'Live Demo' && e.target.innerText !== 'GitHub') {
+			navigate('/details');
+		}
+	};
+
 	return (
 		<div className='projects-root'>
 			{projects.map((project, idx) => {
 				let truncated = truncate(project.description, 125);
 				return (
-					<div className='projects-wrapper'>
+					<div
+						key={idx}
+						id={idx}
+						className='projects-wrapper'
+						onClick={handleClick}
+					>
 						<h4>{project.title}</h4>
 						<img src={`/images/${project.image}`} alt='' />
 						<p>{truncated}</p>
@@ -27,7 +43,7 @@ const Projects = ({ projects }) => {
 								rel='noreferrer'
 								className='live-demo-link'
 							>
-							 Live Demo
+								Live Demo
 							</a>
 						</div>
 					</div>

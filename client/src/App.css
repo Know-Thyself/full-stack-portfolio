@@ -17,13 +17,13 @@ font-family: 'Source Sans Pro', sans-serif;
 	justify-content: space-between;
 	align-items: center;
 	height: 10vh;
-  background-color: #4c516d;
-  color: aliceblue;
+	background-color: #4c516d;
+	color: aliceblue;
 }
 
 .logo {
 	margin-left: 2.5rem;
-  font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 .nav-links {
@@ -38,7 +38,7 @@ font-family: 'Source Sans Pro', sans-serif;
 
 .nav-link {
 	text-decoration: none;
-	color: aliceblue
+	color: aliceblue;
 }
 
 .active {
@@ -73,23 +73,23 @@ font-family: 'Source Sans Pro', sans-serif;
 	font-size: 2.5rem;
 }
 .profile-photo {
-  height: 200px;
+	height: 200px;
 	width: auto;
 	border-radius: 50%;
 }
 .secondary-text {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
 	font-size: 1.25rem;
 }
 
 .hero-right {
 	height: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 5rem;
 }
 
 .links-wrapper {
@@ -100,51 +100,67 @@ font-family: 'Source Sans Pro', sans-serif;
 }
 
 .center-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .link {
-  display: flex;
+	display: flex;
 	justify-content: center;
-  align-items: center;
+	align-items: center;
 	background-color: #4c516d;
 	color: aliceblue;
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
-  text-transform: capitalize;
-  padding: 0.65rem 1.2rem;
-  border-radius: 4px;
-  font-size: 1.12rem;
-  font-weight: 400;
-
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	text-transform: capitalize;
+	padding: 0.65rem 1.2rem;
+	border-radius: 4px;
+	font-size: 1.12rem;
+	font-weight: 400;
 }
 
 .fa-github {
-  font-size: 1.25rem;
-  color: aliceblue;
+	font-size: 1.25rem;
+	color: aliceblue;
 }
 
 .projects-root {
-  width: 90%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+	width: 90%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+	background: url('./images/background-destination-desktop.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	padding: 5%;
 }
 
 .projects-wrapper {
-  width: 100%;
+	width: 100%;
 	background-color: aliceblue;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	text-decoration: none;
 }
 
 .projects-wrapper img {
-  width: inherit;
-  height: auto;
+	width: 90%;
+	height: auto;
 }
 
+.projects-wrapper p {
+	width: 90%;
+}
 .project-links-wrapper {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -157,4 +173,32 @@ font-family: 'Source Sans Pro', sans-serif;
 	padding: 0.45rem 1rem;
 	border-radius: 4px;
 	color: aliceblue;
+	box-shadow: inset 0 0 0 0 #54b3d6;
+	transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	/* font-family: 'Poppins', sans-serif; */
+}
+
+.github-link:hover,
+.live-demo-link:hover {
+	color: #fff;
+	box-shadow: inset 200px 0 0 0 #54b3d6;
+}
+
+.project-details-page {
+	width: 100%;
+}
+.details-title {
+	text-align: center;
+}
+.project-details-wrapper {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	width: 90%;
+	margin: auto;
+	gap: 3rem;
+	place-items: center;
+}
+
+.project-details-wrapper img {
+	width: 100%;
 }
