@@ -1,9 +1,12 @@
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 const Header = ({ theme, setTheme }) => {
 	const switchTheme = () => {
 		const newTheme = theme === 'light' ? 'dark' : 'light';
 		setTheme(newTheme);
+		setChecked(!checked);
 	};
+	const [checked, setChecked] = useState(false);
 
 	return (
 		<header className='header'>
@@ -33,14 +36,33 @@ const Header = ({ theme, setTheme }) => {
 				>
 					Contact
 				</NavLink>
-				<button onClick={switchTheme} className='switch-theme'>
-					{theme === 'light' ? (
-						<i className='fa-regular fa-moon'></i>
-					) : (
-						<i className='fa-solid fa-moon'>&nbsp;</i>
-					)}
-					Dark Mode
-				</button>
+				<div className='radio-switch'>
+					<div className='light-dark-mode'>
+						<input
+							className='switch-checkbox'
+							id='radio-button'
+							name='dark-mode'
+							value='dark-mode'
+							type='checkbox'
+							checked={checked}
+							onChange={(e) => setChecked(!checked)}
+							onClick={switchTheme}
+						/>
+						<label className='switch-label' htmlFor='radio-button'>
+							<span className='switch-button' />
+						</label>
+					</div>
+					<p className='switch-theme' onClick={switchTheme}>
+						<span>
+							{theme === 'light' ? (
+								<i className='fa-regular fa-moon'></i>
+							) : (
+								<i className='fa-solid fa-moon'>&nbsp;</i>
+							)}
+						</span>
+						{checked ? 'Dark Mode' : 'Light Mode'}
+					</p>
+				</div>
 			</nav>
 		</header>
 	);
