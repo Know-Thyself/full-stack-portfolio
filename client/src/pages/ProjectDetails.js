@@ -1,7 +1,8 @@
+import ReadMoreLess from 'react-show-more-text';
 const ProjectDetails = ({ clickedProject }) => {
-	const truncate = (str, n) => {
-		return str.length > n ? str.slice(0, n - 1) + ' ...' : str;
-	};
+	// const truncate = (str, n) => {
+	// 	return str.length > n ? str.slice(0, n - 1) + ' ...' : str;
+	// };
 
 	return (
 		<div className='project-details-page'>
@@ -9,7 +10,18 @@ const ProjectDetails = ({ clickedProject }) => {
 			<div className='project-details-wrapper'>
 				<img src={`/images/${clickedProject.image}`} alt='' />
 				<section>
-					<p>{truncate(clickedProject.description, 700)}</p>
+					{/* <p>{truncate(clickedProject.description, 700)}</p> */}
+					<ReadMoreLess
+						className='read-more-less content-css'
+						lines={7}
+						more='read more ▼'
+						less='read less ▲'
+						truncatedEndingComponent={'... '}
+						anchorClass='anchor-css-class'
+						expanded={false}
+					>
+						{clickedProject.description}
+					</ReadMoreLess>
 					<div className='project-links-wrapper'>
 						<a
 							href={clickedProject.repository}
