@@ -7,23 +7,6 @@ font-family: 'Poppins', sans-serif;
 
 
 :root {
-	--primary-background: #4c516d;
-	--secondary-background: #6d684c;
-	--home-background: url('./images/background-home-desktop.jpg');
-	--projects-background: url('./images/background-destination-desktop.jpg');
-	--hero-banner-text: 'Playfair Display', serif;
-	--primary-font-family: 'Montserrat', sans-serif;
-	--secondary-font-family: 'Source Sans Pro', sans-serif;
-	--text-primary-color: white;
-	--text-secondary-color: aliceblue;
-	--button-hover-bg: #309ec7;
-	--projects-container-hover: #61678b;
-	--active-nav-link: #ff6850;
-	--radio-btn-bg: #969cbd;
-	--radio-btn-border: #B0C4DE;
-}
-
-[data-theme='dark'] {
 	--primary-background: #b3ae92;
 	--secondary-background: #9297b3;
 	--home-background: white;
@@ -38,6 +21,23 @@ font-family: 'Poppins', sans-serif;
 	--active-nav-link: #79035f;
 	--radio-btn-bg: #d3cfb8;
 	--radio-btn-border: #4f3b21;
+}
+
+[data-theme='dark'] {
+	--primary-background: #4c516d;
+	--secondary-background: #6d684c;
+	--home-background: url('./images/background-home-desktop.jpg');
+	--projects-background: url('./images/background-destination-desktop.jpg');
+	--hero-banner-text: 'Playfair Display', serif;
+	--primary-font-family: 'Montserrat', sans-serif;
+	--secondary-font-family: 'Source Sans Pro', sans-serif;
+	--text-primary-color: white;
+	--text-secondary-color: aliceblue;
+	--button-hover-bg: #309ec7;
+	--projects-container-hover: #61678b;
+	--active-nav-link: #ff6850;
+	--radio-btn-bg: #969cbd;
+	--radio-btn-border: #B0C4DE;
 }
 
 .App {
@@ -87,7 +87,7 @@ font-family: 'Poppins', sans-serif;
 .switch-theme {
 	border: none;
 	text-decoration: none;
-	color: var(--text-primary-color);
+	color: var(--text-secondary-color);
 	font-family: 'Poppins', sans-serif;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
