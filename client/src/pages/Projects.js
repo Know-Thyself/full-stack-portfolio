@@ -50,7 +50,7 @@ const Projects = ({ projects, setClickedProject }) => {
 						className='projects-wrapper'
 						onClick={handleClick}
 					>
-						<h4>{project.title}</h4>
+						<h4 className='project-title'>{project.title}</h4>
 						<img src={`/images/${project.image}`} alt='' />
 						<div className='read-more-read-less-wrapper'>
 							<ReadMoreLess
