@@ -15,7 +15,7 @@ function App() {
 		<BrowserRouter>
 			<div className='App' data-theme={theme}>
 				<Header theme={theme} setTheme={setTheme} />
-				<Router theme={theme} setTheme={setTheme} />
+				<Router />
 			</div>
 		</BrowserRouter>
 	);

@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Montserrat:wght@300;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+/* 
+font-family: 'Lato', sans-serif;
+font-family: 'Poppins', sans-serif;
+ */
 
 
 :root {
@@ -17,18 +22,18 @@
 }
 
 [data-theme='dark'] {
-	--primary-background: #4c516d;
-	--secondary-background: #6d684c;
-	--home-background: url('./images/background-home-desktop.jpg');
-	--projects-background: url('./images/background-destination-desktop.jpg');
+	--primary-background: #b3ae92;
+	--secondary-background: #9297b3;
+	--home-background: white;
+	--projects-background: white;
 	--hero-banner-text: 'Playfair Display', serif;
 	--primary-font-family: 'Montserrat', sans-serif;
 	--secondary-font-family: 'Source Sans Pro', sans-serif;
-	--text-primary-color: white;
-	--text-secondary-color: aliceblue;
-	--button-hover-bg: #309ec7;
-	--projects-container-hover: #61678b;
-	--active-nav-link: #ff6850;
+	--text-primary-color: black;
+	--text-secondary-color: #0f0700;
+	--button-hover-bg: #cf6138;
+	--projects-container-hover: #9e9874;
+	--active-nav-link: #79035f;
 }
 
 .App {
@@ -51,13 +56,17 @@
 }
 
 .nav-links {
-	font-family: 'League Spartan', sans-serif;
-	text-transform: uppercase;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	gap: 1rem;
 	margin-right: 2.5rem;
+	/* font-family: 'League Spartan', sans-serif;
+	font-weight: 500; */
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 1rem;
 }
 
 .nav-link {
@@ -67,7 +76,23 @@
 
 .active {
 	text-decoration: none;
+	font-weight: 600;
 	color: var(--active-nav-link);
+}
+
+.switch-theme {
+	border: none;
+	text-decoration: none;
+	background-color: var(--primary-background);
+	background-color: orangered;
+	background: var(--home-background);
+	border-radius: 50%;
+	padding: 0.25rem 0.5rem;
+	color: var(--text-primary-color);
+	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	cursor: pointer;
 }
 
 .home {
@@ -80,6 +105,10 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: inherit;
+	max-width: 100%;
+	/* object-fit: cover;
+	object-position: center; */
+	resize: both;
 	color: var(--text-primary-color);
 	display: flex;
 	justify-content: space-between;
@@ -140,6 +169,8 @@
 	color: var(--text-secondary-color);
 	color: var(--text-primary-color);
 	font-family: var(--primary-font-family);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
 	text-decoration: none;
 	text-transform: capitalize;
 	padding: 0.65rem 1.2rem;
