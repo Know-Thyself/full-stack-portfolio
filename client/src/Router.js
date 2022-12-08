@@ -5,10 +5,12 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import ProjectDetails from './pages/ProjectDetails';
+import ReadMore from './pages/ReadMore';
 
 const Router = () => {
 	const [projects, setProjects] = useState([]);
 	const [clickedProject, setClickedProject] = useState();
+	const [readMore, setReadMore] = useState();
 	useEffect(() => {
 		fetch('/projects')
 			.then((res) => res.json())
@@ -27,8 +29,8 @@ const Router = () => {
 				element={
 					<Projects
 						projects={projects}
-						clickedProject={clickedProject}
 						setClickedProject={setClickedProject}
+						setReadMore={setReadMore}
 					/>
 				}
 			/>
@@ -38,6 +40,11 @@ const Router = () => {
 				exact
 				path='/details'
 				element={<ProjectDetails clickedProject={clickedProject} />}
+			/>
+			<Route
+				exact
+				path='/read-more'
+				element={<ReadMore readMore={readMore} />}
 			/>
 		</Routes>
 	);

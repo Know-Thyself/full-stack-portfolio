@@ -1,12 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import ReadMoreLess from 'react-show-more-text';
 
-const Projects = ({ projects, setClickedProject }) => {
+const Projects = ({ projects, setClickedProject, setReadMore }) => {
 	const navigate = useNavigate();
 
 	const handleClick = (e) => {
 		let selected = projects[e.currentTarget.id];
 		setClickedProject(selected);
+		setReadMore(selected);
 		if (
 			e.target.innerText !== 'Live Demo' &&
 			e.target.innerText !== 'GitHub' &&
@@ -26,14 +27,14 @@ const Projects = ({ projects, setClickedProject }) => {
 					e.target.innerText === 'read more ▼'
 				) {
 					element.style.height = '100%';
+					navigate('/read-more');
 				} else if (
 					element.id === e.currentTarget.id &&
 					e.target.innerText === 'read less ▲'
 				) {
-					element.style.height = 'auto';
-					element.style.width = '100%';
+					element.style.height = 'fit-content';
 				} else {
-					element.style.height = 'auto';
+					element.style.height = 'fit-content';
 					element.style.marginTop = '0';
 				}
 			}
