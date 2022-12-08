@@ -1,25 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Montserrat:wght@300;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
-/* 
-font-family: 'League Spartan', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Source Sans Pro', sans-serif;
- */
+
 :root {
-	--app-background: hsl(0, 0%, 98%);
+	--primary-background: #4c516d;
+	--secondary-background: #6d684c;
 	--home-background: url('./images/background-home-desktop.jpg');
 	--projects-background: url('./images/background-destination-desktop.jpg');
-	--elements-bg: hsl(0, 0%, 100%);
-	--text-primary: hsl(200, 15%, 8%);
-	--light-mode-input: hsl(0, 0%, 52%);
+	--hero-banner-text: 'Playfair Display', serif;
+	--primary-font-family: 'Montserrat', sans-serif;
+	--secondary-font-family: 'Source Sans Pro', sans-serif;
+	--text-primary-color: white;
+	--text-secondary-color: aliceblue;
+	--button-hover-bg: #309ec7;
+	--projects-container-hover: #61678b;
+	--active-nav-link: #ff6850;
 }
 
 [data-theme='dark'] {
-	--app-background: hsl(207, 26%, 17%);
-	--elements-bg: hsl(209, 23%, 22%);
-	--text-primary: hsl(0, 0%, 100%);
-	--light-mode-input: hsl(0, 0%, 98%);
+	--primary-background: #4c516d;
+	--secondary-background: #6d684c;
+	--home-background: url('./images/background-home-desktop.jpg');
+	--projects-background: url('./images/background-destination-desktop.jpg');
+	--hero-banner-text: 'Playfair Display', serif;
+	--primary-font-family: 'Montserrat', sans-serif;
+	--secondary-font-family: 'Source Sans Pro', sans-serif;
+	--text-primary-color: white;
+	--text-secondary-color: aliceblue;
+	--button-hover-bg: #309ec7;
+	--projects-container-hover: #61678b;
+	--active-nav-link: #ff6850;
 }
 
 .App {
@@ -32,8 +41,8 @@ font-family: 'Source Sans Pro', sans-serif;
 	justify-content: space-between;
 	align-items: center;
 	height: 10vh;
-	background-color: #4c516d;
-	color: aliceblue;
+	background-color: var(--primary-background);
+	color: var(--text-secondary-color);
 }
 
 .logo {
@@ -53,12 +62,12 @@ font-family: 'Source Sans Pro', sans-serif;
 
 .nav-link {
 	text-decoration: none;
-	color: aliceblue;
+	color: var(--text-secondary-color);
 }
 
 .active {
 	text-decoration: none;
-	color: #ff6850;
+	color: var(--active-nav-link);
 }
 
 .home {
@@ -66,17 +75,16 @@ font-family: 'Source Sans Pro', sans-serif;
 	height: 90vh;
 }
 .hero {
-	/* background: url('./images/background-destination-desktop.jpg'); */
 	background: var(--home-background);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: inherit;
-	color: white;
+	color: var(--text-primary-color);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-family: 'Playfair Display', serif;
+	font-family: var(--hero-banner-text);
 	font-weight: 900;
 	gap: 5rem;
 }
@@ -96,8 +104,7 @@ font-family: 'Source Sans Pro', sans-serif;
 	border-radius: 50%;
 }
 .subtext {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--primary-font-family);
 	font-weight: 300;
 	font-size: 1rem;
 	line-height: 1.5rem;
@@ -129,9 +136,10 @@ font-family: 'Source Sans Pro', sans-serif;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #4c516d;
-	color: aliceblue;
-	font-family: 'Montserrat', sans-serif;
+	background-color: var(--primary-background);
+	color: var(--text-secondary-color);
+	color: var(--text-primary-color);
+	font-family: var(--primary-font-family);
 	text-decoration: none;
 	text-transform: capitalize;
 	padding: 0.65rem 1.2rem;
@@ -142,7 +150,8 @@ font-family: 'Source Sans Pro', sans-serif;
 
 .fa-github {
 	font-size: 1.25rem;
-	color: aliceblue;
+	color: var(--text-secondary-color);
+	color: var(--text-primary-color);
 }
 
 .projects-root {
@@ -168,35 +177,33 @@ font-family: 'Source Sans Pro', sans-serif;
 .projects-wrapper {
 	width: 100%;
 	margin-top: 0;
-	background-color: #4c516d;
+	background-color: var(--primary-background);
 	cursor: pointer;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* align-content: flex-start; */
-	margin: auto;
 	text-decoration: none;
-	box-shadow: inset 0 0 0 0 #4c516d;
-	box-shadow: inset 0 0 0 0 #61678b;
+	box-shadow: inset 0 0 0 0 var(--primary-background);
+	box-shadow: inset 0 0 0 0 var(--projects-container-hover);
 	transition: color 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
 	border-radius: 8px;
 }
 
 .projects-wrapper:hover {
-	color: #fff;
-	box-shadow: inset 1000px 0 0 0 #4c516d;
-	box-shadow: inset 1000px 0 0 0 #61678b;
+	color: var(--text-primary-color);
+	box-shadow: inset 1000px 0 0 0 var(--primary-background);
+	box-shadow: inset 1000px 0 0 0 var(--projects-container-hover);
 }
 
 .project-title {
 	width: 100%;
-	background-color: #6d684c;
+	background-color: var(--secondary-background);
 	margin: 0 auto;
 	text-align: center;
 	padding: 0.5rem 0;
 	border-radius: 4px;
-	color: aliceblue;
+	color: var(--text-secondary-color);
 }
 
 .projects-wrapper img {
@@ -207,12 +214,11 @@ font-family: 'Source Sans Pro', sans-serif;
 .read-more-read-less-wrapper {
 	width: 90%;
 	margin: 0.5rem auto;
-	color: aliceblue;
+	color: var(--text-secondary-color);
 }
 
 .anchor-css-class {
-	color: crimson;
-	color: #ff6850;
+	color: var(--active-nav-link);
 }
 .project-links-wrapper {
 	width: 100%;
@@ -224,19 +230,19 @@ font-family: 'Source Sans Pro', sans-serif;
 .github-link,
 .live-demo-link {
 	text-decoration: none;
-	background-color: #6d684c;
+	background-color: var(--secondary-background);
 	padding: 0.45rem 1rem;
 	border-radius: 4px;
-	color: aliceblue;
-	box-shadow: inset 0 0 0 0 #309ec7;
+	color: var(--text-secondary-color);
+	box-shadow: inset 0 0 0 0 var(--button-hover-bg);
 	transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 	/* font-family: 'Poppins', sans-serif; */
 }
 
 .github-link:hover,
 .live-demo-link:hover {
-	color: #fff;
-	box-shadow: inset 200px 0 0 0 #309ec7;
+	color: var(--text-primary-color);
+	box-shadow: inset 200px 0 0 0 var(--button-hover-bg);
 }
 
 .project-details-page {
