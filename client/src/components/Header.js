@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+// import Toggle from 'react-toggle';
 const Header = ({ theme, setTheme }) => {
+	// const [isDark, setIsDark] = useState(true);
 	const switchTheme = () => {
 		const newTheme = theme === 'light' ? 'dark' : 'light';
 		setTheme(newTheme);
+		theme === 'light' ? setChecked(true) : setChecked(false);
 		setChecked(!checked);
 	};
-	const [checked, setChecked] = useState(false);
+	const [checked, setChecked] = useState(() =>
+		theme === 'light' ? true : false
+	);
 
 	return (
 		<header className='header'>
@@ -36,32 +41,45 @@ const Header = ({ theme, setTheme }) => {
 				>
 					Contact
 				</NavLink>
-				<div className='radio-switch'>
-					<div className='light-dark-mode'>
-						<input
-							className='switch-checkbox'
-							id='radio-button'
-							name='dark-mode'
-							value='dark-mode'
-							type='checkbox'
-							checked={checked}
-							onChange={(e) => setChecked(!checked)}
-							onClick={switchTheme}
-						/>
-						<label className='switch-label' htmlFor='radio-button'>
-							<span className='switch-button' />
-						</label>
-					</div>
-					<p className='switch-theme' onClick={switchTheme}>
+				<div className='theme-icons-and-radio-btn'>
+					<div className='radio-switch'>
+						<div className='light-dark-mode'>
+							<input
+								className='switch-checkbox'
+								id='radio-button'
+								name='dark-mode'
+								value='dark-mode'
+								type='checkbox'
+								checked={checked}
+								onChange={switchTheme}
+								// onClick={switchTheme}
+							/>
+							<label className='switch-label' htmlFor='radio-button'>
+								<span className='switch-button' />
+							</label>
+						</div>
+						{/* <p className='switch-theme' onClick={switchTheme}> */}
+						{/* <span>{theme === 'dark' ? <span>🌒</span> : <span>☀️</span>}</span> */}
 						<span>
-							{theme === 'light' ? (
-								<i className='fa-regular fa-moon'></i>
-							) : (
+							{theme === 'dark' ? (
 								<i className='fa-solid fa-moon'>&nbsp;</i>
+							) : (
+								<span>☀️</span>
+								// <i class='fa-solid fa-sun'></i>
+								// <i className='fa-regular fa-moon'></i>
 							)}
 						</span>
-						{checked ? 'Dark Mode' : 'Light Mode'}
-					</p>
+
+						{/* {checked ? 'Dark Mode' : 'Light Mode'} */}
+						{/* </p> */}
+					</div>
+					{/* <Toggle
+						className='dark-mode-toggle'
+						checked={isDark}
+						onChange={({ target }) => setIsDark(target.checked)}
+						icons={{ checked: '🌙', unchecked: '🔆' }}
+						aria-label='Dark mode toggle'
+					/> */}
 				</div>
 			</nav>
 		</header>

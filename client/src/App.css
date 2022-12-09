@@ -3,6 +3,7 @@
 /* 
 font-family: 'Lato', sans-serif;
 font-family: 'Poppins', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
  */
 
 :root {
@@ -11,7 +12,7 @@ font-family: 'Poppins', sans-serif;
 	--home-background: white;
 	--projects-background: white;
 	--hero-banner-text: 'Playfair Display', serif;
-	--primary-font-family: 'Montserrat', sans-serif;
+	--primary-font-family: 'Poppins', sans-serif;
 	--secondary-font-family: 'Source Sans Pro', sans-serif;
 	--text-primary-color: black;
 	--text-secondary-color: #0f0700;
@@ -29,7 +30,7 @@ font-family: 'Poppins', sans-serif;
 	--projects-background: url('./images/background-destination-desktop.jpg');
 	--hero-banner-text: 'Playfair Display', serif;
 	--primary-font-family: 'Montserrat', sans-serif;
-	--secondary-font-family: 'Source Sans Pro', sans-serif;
+	--secondary-font-family: 'Montserrat', sans-serif;
 	--text-primary-color: white;
 	--text-secondary-color: aliceblue;
 	--button-hover-bg: #309ec7;
@@ -67,7 +68,7 @@ font-family: 'Poppins', sans-serif;
 	/* font-family: 'League Spartan', sans-serif;
 	font-weight: 500; */
 	font-family: 'Poppins', sans-serif;
-	font-weight: 400;
+	font-weight: 500;
 	text-transform: uppercase;
 	font-size: 1rem;
 }
@@ -79,7 +80,7 @@ font-family: 'Poppins', sans-serif;
 
 .active {
 	text-decoration: none;
-	font-weight: 600;
+	font-weight: 500;
 	color: var(--active-nav-link);
 }
 
@@ -105,7 +106,6 @@ font-family: 'Poppins', sans-serif;
 	height: inherit;
 	max-width: 100%;
 	resize: both;
-	color: var(--text-primary-color);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -115,6 +115,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .hero-text-container {
+	color: var(--text-primary-color);
 	margin-left: 5rem;
 	width: 45%;
 	height: 100%;
@@ -129,7 +130,7 @@ font-family: 'Poppins', sans-serif;
 	border-radius: 50%;
 }
 .subtext {
-	font-family: var(--primary-font-family);
+	font-family: var(--secondary-font-family);
 	font-weight: 300;
 	font-size: 1rem;
 	line-height: 1.5rem;
@@ -199,7 +200,14 @@ font-family: 'Poppins', sans-serif;
 	height: 100%;
 	padding: 3%;
 }
-
+.theme-icons-and-radio-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fa-sun {
+	color: gold;
+}
 .projects-wrapper,
 .read-more-project-wrapper {
 	width: 100%;
@@ -335,11 +343,9 @@ font-family: 'Poppins', sans-serif;
 }
 
 .light-dark-mode {
-	font-family: 'EB Garamond', serif;
 	display: grid;
 	place-items: start;
 	grid-template-columns: repeat(2, 1fr);
-	color: white;
 }
 
 .switch-label {
