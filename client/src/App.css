@@ -55,12 +55,9 @@ font-family: 'Source Sans Pro', sans-serif;
 }
 
 .logo {
-	/* margin-left: 2.5rem; */
-	/* font-family: 'Source Sans Pro', sans-serif; */
 	height: inherit;
-	/* width: auto; */
+	width: auto;
 	margin-top: 0;
-	
 }
 
 .nav-links {
@@ -69,9 +66,8 @@ font-family: 'Source Sans Pro', sans-serif;
 	align-items: center;
 	gap: 1rem;
 	margin-right: 2.5rem;
-	/* font-family: 'League Spartan', sans-serif;
-	font-weight: 500; */
 	font-family: 'Poppins', sans-serif;
+	font-family: var(--primary-font-family);
 	font-weight: 500;
 	text-transform: uppercase;
 	font-size: 1rem;
