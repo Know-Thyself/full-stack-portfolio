@@ -15,7 +15,7 @@ const Router = () => {
 		fetch('/projects')
 			.then((res) => res.json())
 			.then((data) => {
-				setProjects(data[0].content.projects);
+				setProjects(data);
 			})
 			.catch((error) => console.error(error));
 	}, []);

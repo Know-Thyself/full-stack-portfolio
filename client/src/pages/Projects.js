@@ -73,7 +73,7 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 								rel='noreferrer'
 								className='github-link'
 							>
-								<i class='fa-brands fa-github'></i>&nbsp; GitHub
+								<i className='fa-brands fa-github'></i>&nbsp; GitHub
 							</a>
 							<a
 								href={project.url}

@@ -13,7 +13,7 @@ const Header = ({ theme, setTheme }) => {
 
 	return (
 		<header className='header'>
-			<img src='/images/temp-logo.png' alt='logo' className='logo' />
+			<img src='/images/placeholder-logo.png' alt='logo' className='logo' />
 			<nav className='nav-links'>
 				<NavLink
 					to='/'

@@ -28,7 +28,7 @@ const Home = () => {
 							rel='noreferrer'
 							className='link'
 						>
-							<i class='fa-brands fa-github'></i>&nbsp; GitHub
+							<i className='fa-brands fa-github'></i>&nbsp; GitHub
 						</a>
 						<Link to='/projects' className='link'>
 							Projects
