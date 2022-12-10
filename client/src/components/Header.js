@@ -4,11 +4,11 @@ const Header = ({ theme, setTheme }) => {
 	const switchTheme = () => {
 		const newTheme = theme === 'light' ? 'dark' : 'light';
 		setTheme(newTheme);
-		theme === 'light' ? setIsChecked(true) : setIsChecked(false);
+		theme === 'light' ? setIsChecked(false) : setIsChecked(true);
 		setIsChecked(!isChecked);
 	};
 	const [isChecked, setIsChecked] = useState(() =>
-		theme === 'light' ? true : false
+		theme === 'dark' ? true : false
 	);
 
 	return (
@@ -52,15 +52,14 @@ const Header = ({ theme, setTheme }) => {
 								onChange={switchTheme}
 							/>
 							<label className='switch-label' htmlFor='radio-button'>
+								<i className={theme === 'dark' ? 'fa-solid fa-moon' : 'd-none'}>
+									&nbsp;
+								</i>
 								<span className='switch-button' />
+								<span className={theme === 'light' ? 'sun-icon' : 'd-none'}>
+									☀️
+								</span>
 							</label>
-						</div>
-						<div>
-							{theme === 'dark' ? (
-								<i className='fa-solid fa-moon'>&nbsp;</i>
-							) : (
-								<span>☀️</span>
-							)}
 						</div>
 					</div>
 				</div>

@@ -352,8 +352,9 @@ font-family: 'Source Sans Pro', sans-serif;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	justify-content: space-between;
 	cursor: pointer;
-	width: 40px;
+	width: 50px;
 	height: 22px;
 	background: var(--radio-btn-bg);
 	border-radius: 100px;
@@ -364,7 +365,6 @@ font-family: 'Source Sans Pro', sans-serif;
 
 .switch-label .switch-button {
 	position: absolute;
-	top: 0;
 	left: 2px;
 	width: 23px;
 	height: 22px;
@@ -377,6 +377,13 @@ font-family: 'Source Sans Pro', sans-serif;
 .switch-checkbox {
 	opacity: 0;
 }
+.fa-solid {
+	margin-left: 4px;
+	font-size: 1rem;
+}
+.sun-icon {
+	font-size: 1.12rem;
+}
 
 .switch-checkbox:checked + .switch-label .switch-button {
 	left: calc(100% - 2px);
@@ -384,10 +391,23 @@ font-family: 'Source Sans Pro', sans-serif;
 	background: var(--active-nav-link);
 }
 
+.switch-checkbox:checked + .switch-label .switch-button:hover {
+	background-color:  var(--text-secondary-color);
+}
+
 .switch-label:active .switch-button {
-	width: 30px;
+	width: 28px;
+}
+
+.switch-button:hover {
+	background-color: var(--text-secondary-color);
 }
 
 .switch-checkbox:checked + .switch-label {
 	background: var(--radio-btn-bg);
+	background: var(--home-background);
+}
+
+.d-none {
+	opacity: 0;
 }
