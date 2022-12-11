@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
 /* 
 font-family: 'Lato', sans-serif;
@@ -8,24 +8,31 @@ font-family: 'Source Sans Pro', sans-serif;
 
 :root {
 	--primary-background: #b3ae92;
-	--secondary-background: #9297b3;
+	/* --primary-background: #413E3D; */
+	--secondary-background: #9297B3;
 	--home-background: white;
 	--projects-background: white;
+	--projects-container-bg: #b3ae92;
 	--hero-banner-text: 'Playfair Display', serif;
 	--primary-font-family: 'Poppins', sans-serif;
 	--secondary-font-family: 'Source Sans Pro', sans-serif;
-	--text-primary-color: black;
-	--text-secondary-color: #0f0700;
+	--text-primary-color: #0f0700;
+	--text-secondary-color: #790326;
+	--nav-links-color: #413E3D;
 	--button-hover-bg: #cf6138;
 	--projects-container-hover: #9e9874;
-	--active-nav-link: #79035f;
+	--active-nav-link: #014421;
 	--radio-btn-bg: #d3cfb8;
-	--radio-btn-border: #4f3b21;
+	--radio-btn-border: #faf2c4;
+	--switch-button-bg: #32CD32;
 }
 
 [data-theme='dark'] {
 	--primary-background: #4c516d;
+	--primary-background: #2d3041;
 	--secondary-background: #6d684c;
+	--secondary-background: #413E3D;
+	--projects-container-bg: #4c516d;
 	--home-background: url('./images/background-home-desktop.jpg');
 	--projects-background: url('./images/background-destination-desktop.jpg');
 	--hero-banner-text: 'Playfair Display', serif;
@@ -35,9 +42,11 @@ font-family: 'Source Sans Pro', sans-serif;
 	--text-secondary-color: aliceblue;
 	--button-hover-bg: #309ec7;
 	--projects-container-hover: #61678b;
-	--active-nav-link: #ff6850;
+	--active-nav-link: #FF003F;
+	--nav-links-color: #d6fae5;
 	--radio-btn-bg: #969cbd;
 	--radio-btn-border: #b0c4de;
+	--switch-button-bg: #BA0021;
 }
 
 .App {
@@ -68,14 +77,19 @@ font-family: 'Source Sans Pro', sans-serif;
 	margin-right: 2.5rem;
 	font-family: 'Poppins', sans-serif;
 	font-family: var(--primary-font-family);
-	font-weight: 500;
+	font-weight: 400;
 	text-transform: uppercase;
 	font-size: 1rem;
 }
 
 .nav-link {
 	text-decoration: none;
-	color: var(--text-secondary-color);
+	/* color: var(--text-secondary-color); */
+	color: var(--nav-links-color);
+}
+
+.nav-link:hover {
+	color: var(--active-nav-link);
 }
 
 .active {
@@ -164,7 +178,7 @@ font-family: 'Source Sans Pro', sans-serif;
 	align-items: center;
 	background-color: var(--primary-background);
 	color: var(--text-secondary-color);
-	color: var(--text-primary-color);
+	/* color: var(--text-primary-color); */
 	font-family: var(--primary-font-family);
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
@@ -179,7 +193,6 @@ font-family: 'Source Sans Pro', sans-serif;
 .fa-github {
 	font-size: 1.25rem;
 	color: var(--text-secondary-color);
-	color: var(--text-primary-color);
 }
 
 .projects-root {
@@ -213,7 +226,7 @@ font-family: 'Source Sans Pro', sans-serif;
 	width: 100%;
 	height: fit-content;
 	margin-top: 0;
-	background-color: var(--primary-background);
+	background-color: var(--projects-container-bg);
 	cursor: pointer;
 	display: flex;
 	flex-direction: column;
@@ -238,6 +251,7 @@ font-family: 'Source Sans Pro', sans-serif;
 	padding: 0.5rem 0;
 	border-radius: 4px;
 	color: var(--text-secondary-color);
+	/* color: var(--nav-links-color); */
 }
 
 .projects-wrapper img {
@@ -249,6 +263,7 @@ font-family: 'Source Sans Pro', sans-serif;
 	width: 90%;
 	margin: 0.5rem auto;
 	color: var(--text-secondary-color);
+	color: var(--nav-links-color);
 }
 
 .anchor-css-class {
@@ -370,7 +385,7 @@ font-family: 'Source Sans Pro', sans-serif;
 	height: 22px;
 	border-radius: 30px;
 	transition: 0.2s;
-	background: var(--active-nav-link);
+	background: var(--switch-button-bg);
 	box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
 }
 
@@ -388,23 +403,14 @@ font-family: 'Source Sans Pro', sans-serif;
 .switch-checkbox:checked + .switch-label .switch-button {
 	left: calc(100% - 2px);
 	transform: translateX(-100%);
-	background: var(--active-nav-link);
-}
-
-.switch-checkbox:checked + .switch-label .switch-button:hover {
-	background-color:  var(--text-secondary-color);
+	background-color: var(--switch-button-bg);
 }
 
 .switch-label:active .switch-button {
 	width: 28px;
 }
 
-.switch-button:hover {
-	background-color: var(--text-secondary-color);
-}
-
 .switch-checkbox:checked + .switch-label {
-	background: var(--radio-btn-bg);
 	background: var(--home-background);
 }
 
