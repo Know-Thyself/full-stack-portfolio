@@ -18,12 +18,12 @@ const About = () => {
 				<div className='about-img-wrapper'>
 					<img
 						className='about-img'
-						src='/images/minimal-code-wallpaper.jpg'
+						src='/images/about.png'
 						alt=''
 					/>
 				</div>
-				<div>
-					<h1>About Page</h1>
+				<div className='about-text-wrapper'>
+					<h1>About Me</h1>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 						eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras
@@ -38,10 +38,7 @@ const About = () => {
 						risus. Porta nibh venenatis cras sed. Commodo sed egestas egestas
 						fringilla. Sed viverra ipsum nunc aliquet bibendum enim facilisis
 						gravida neque. Tellus elementum sagittis vitae et leo duis. Quis
-						commodo odio aenean sed. Quis viverra nibh cras pulvinar mattis nunc
-						sed. Ut consequat semper viverra nam libero justo laoreet sit amet.
-						Vel pretium lectus quam id leo in vitae turpis massa. Eu facilisis
-						sed odio morbi quis commodo odio aenean sed.
+						commodo odio aenean sed.
 					</p>
 				</div>
 			</div>
