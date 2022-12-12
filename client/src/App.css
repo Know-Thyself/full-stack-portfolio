@@ -331,6 +331,7 @@ font-family: 'Source Sans Pro', sans-serif;
 .project-details-wrapper .read-more-less {
 	cursor: pointer;
 	margin-bottom: 1rem;
+	white-space: pre-line !important;
 }
 
 .read-more-project-wrapper {

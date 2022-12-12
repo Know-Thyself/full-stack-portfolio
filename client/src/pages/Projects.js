@@ -44,6 +44,7 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 	return (
 		<div className='projects-root'>
 			{projects.map((project, idx) => {
+				const descriptionLines = project.description.split(/\n/);
 				return (
 					<div
 						key={idx}
@@ -63,7 +64,9 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 								anchorClass='anchor-css-class'
 								expanded={false}
 							>
-								{project.description}
+								{descriptionLines.map((line, idx) => (
+									<p>{line}</p>
+								))}
 							</ReadMoreLess>
 						</div>
 						<div className='project-links-wrapper'>

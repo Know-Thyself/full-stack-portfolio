@@ -1,4 +1,17 @@
+import React, { useState, useEffect } from 'react';
+
 const About = () => {
+	const [bio, setBio] = useState({});
+
+	useEffect(() => {
+		fetch('/bio')
+			.then((res) => res.json())
+			.then((data) => {
+				setBio(data);
+			})
+			.catch((error) => console.error(error));
+	}, []);
+
 	return (
 		<main className='about-page-main-container'>
 			<div className='about-page-wrapper'>

@@ -1,6 +1,7 @@
 import ReadMoreLess from 'react-show-more-text';
 import { useNavigate } from 'react-router-dom';
 const ReadMore = ({ readMore }) => {
+	const descriptionLines = readMore.description.split(/\n/);
 	const navigate = useNavigate();
 	const handleClick = (e) => {
 		if (e.target.innerText === 'read less ▲') {
@@ -22,7 +23,9 @@ const ReadMore = ({ readMore }) => {
 						anchorClass='anchor-css-class'
 						expanded={true}
 					>
-						{readMore.description}
+						{descriptionLines.map((line, idx) => (
+							<p>{line}</p>
+						))}
 					</ReadMoreLess>
 				</div>
 				<div className='project-links-wrapper'>
