@@ -28,11 +28,16 @@ font-family: 'Source Sans Pro', sans-serif;
 }
 
 [data-theme='dark'] {
-	--primary-background: #4c516d;
-	--primary-background: #2d3041;
-	--secondary-background: #6d684c;
+	/* --primary-background: #4c516d;
+	--primary-background: #2d3041; */
+	--primary-background: #1E202B;
+	/* --secondary-background: #6d684c;
 	--secondary-background: #413E3D;
-	--projects-container-bg: #4c516d;
+	--secondary-background: #2B281E; */
+	--secondary-background: #3F3D2D;
+	/* --projects-container-bg: #4c516d;
+	--projects-container-bg: #1E202B; */
+	--projects-container-bg: #2d3041;
 	--home-background: url('./images/background-home-desktop.jpg');
 	--projects-background: url('./images/background-destination-desktop.jpg');
 	--hero-banner-text: 'Playfair Display', serif;
@@ -416,4 +421,54 @@ font-family: 'Source Sans Pro', sans-serif;
 
 .d-none {
 	opacity: 0;
+}
+
+/* About page */
+.about-page-main-container {
+	width: 100%;
+	background-color: var(--projects-container-bg);
+}
+.about-page-wrapper {
+	display: flex;
+	width: 70%;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+	gap: 4rem;
+}
+.about-img-wrapper {
+	width: 100px;
+	height: 150px;
+	border: 4px solid yellowgreen;
+}
+
+.about-img {
+	width: inherit;
+	height: inherit;
+	margin-left: 2rem;
+	padding-top: 2rem;
+
+}
+
+.skills-section {
+	width: 100%;
+	background-color: var(--secondary-background);
+	padding: 2rem auto;
+}
+
+.tech-stacks {
+	width: 80%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+	place-items: center;
+
+}
+
+.skill-card {
+	height: 250px;
+	width: 200px;
+	background-color: var(--primary-background);
+	margin: 2rem auto;
 }
