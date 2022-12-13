@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import ProjectDetails from './pages/ProjectDetails';
-import ReadMore from './pages/ReadMore';
+import Home from './pages/home/Home';
+import Projects from './pages/projects/Projects';
+import About from './pages/about/About';
+import Contact from './pages/contact/Contact';
+import ProjectDetails from './pages/details/ProjectDetails';
+import ReadMore from './pages/more/ReadMore';
 
 const Router = () => {
 	const [projects, setProjects] = useState([]);
@@ -43,7 +43,7 @@ const Router = () => {
 			/>
 			<Route
 				exact
-				path='/read-more'
+				path='/readmore'
 				element={<ReadMore readMore={readMore} />}
 			/>
 		</Routes>

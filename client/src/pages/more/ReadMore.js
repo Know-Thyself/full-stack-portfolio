@@ -1,5 +1,7 @@
 import ReadMoreLess from 'react-show-more-text';
 import { useNavigate } from 'react-router-dom';
+import './ReadMore.css';
+
 const ReadMore = ({ readMore }) => {
 	const descriptionLines = readMore.description.split(/\n/);
 	const navigate = useNavigate();

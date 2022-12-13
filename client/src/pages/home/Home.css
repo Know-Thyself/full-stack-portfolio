@@ -1,0 +1,87 @@
+
+.home {
+	width: 100%;
+	height: 90vh;
+}
+.hero {
+	background: var(--home-background);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: inherit;
+	max-width: 100%;
+	resize: both;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: var(--hero-banner-text);
+	font-weight: 900;
+	gap: 5rem;
+}
+
+.hero-text-container {
+	color: var(--text-primary-color);
+	margin-left: 5rem;
+	width: 45%;
+	height: 100%;
+}
+
+.primary-text {
+	font-size: 2.5rem;
+}
+.profile-photo {
+	height: 200px;
+	width: auto;
+	border-radius: 50%;
+}
+.subtext {
+	font-family: var(--secondary-font-family);
+	font-weight: 300;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	white-space: 'pre-line';
+}
+
+.hero-right {
+	height: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 5rem;
+}
+
+.links-wrapper {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 2rem;
+}
+
+.center-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary-background);
+	color: var(--text-secondary-color);
+	/* color: var(--text-primary-color); */
+	font-family: var(--primary-font-family);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	text-decoration: none;
+	text-transform: capitalize;
+	padding: 0.65rem 1.2rem;
+	border-radius: 4px;
+	font-size: 1.12rem;
+	font-weight: 400;
+}
+
+.fa-github {
+	font-size: 1.25rem;
+	color: var(--text-secondary-color);
+}

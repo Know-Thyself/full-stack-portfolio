@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import ReadMoreLess from 'react-show-more-text';
+import './Projects.css';
 
 const Projects = ({ projects, setClickedProject, setReadMore }) => {
 	const navigate = useNavigate();
@@ -27,7 +28,7 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 					e.target.innerText === 'read more ▼'
 				) {
 					element.style.height = '100%';
-					navigate('/read-more');
+					navigate('/readmore');
 				} else if (
 					element.id === e.currentTarget.id &&
 					e.target.innerText === 'read less ▲'

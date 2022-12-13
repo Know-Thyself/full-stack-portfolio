@@ -1,0 +1,105 @@
+.projects-root {
+	width: 94%;
+	margin: auto;
+	margin-top: 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-content: flex-start;
+	justify-content: center;
+	grid-auto-rows: auto;
+	grid-auto-columns: auto;
+	gap: 2rem;
+	background: var(--projects-background);
+	/* background: #333649;
+	background: #1E272B; */
+	/* background: #2B291E; */
+	 
+	
+	/* background: #221E2B;
+	background: #333649; */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	padding: 3%;
+}
+
+/* .theme-icons-and-radio-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} */
+.fa-sun {
+	color: gold;
+}
+.projects-wrapper {
+	width: 100%;
+	height: fit-content;
+	margin-top: 0;
+	background-color: var(--projects-container-bg);
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	box-shadow: inset 0 0 0 0 var(--projects-container-hover);
+	transition: color 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
+	border-radius: 8px;
+}
+
+.projects-wrapper:hover {
+	color: var(--text-primary-color);
+	box-shadow: inset 1000px 0 0 0 var(--projects-container-hover);
+}
+
+.project-title {
+	width: 100%;
+	background-color: var(--secondary-background);
+	margin: 0 auto;
+	text-align: center;
+	padding: 0.5rem 0;
+	border-radius: 4px;
+	color: var(--text-secondary-color);
+	/* color: var(--nav-links-color); */
+}
+
+.projects-wrapper img {
+	width: 90%;
+	height: auto;
+}
+
+.read-more-read-less-wrapper {
+	width: 90%;
+	margin: 0.5rem auto;
+	color: var(--text-secondary-color);
+	color: var(--nav-links-color);
+}
+
+.anchor-css-class {
+	color: var(--active-nav-link);
+}
+.project-links-wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.github-link,
+.live-demo-link {
+	text-decoration: none;
+	background-color: var(--secondary-background);
+	padding: 0.45rem 1rem;
+	border-radius: 4px;
+	color: var(--text-secondary-color);
+	box-shadow: inset 0 0 0 0 var(--button-hover-bg);
+	transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+	/* font-family: 'Poppins', sans-serif; */
+}
+
+.github-link:hover,
+.live-demo-link:hover {
+	color: var(--text-primary-color);
+	box-shadow: inset 200px 0 0 0 var(--button-hover-bg);
+}

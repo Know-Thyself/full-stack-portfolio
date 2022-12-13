@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import useLocalStorage from 'use-local-storage';
 import Router from './Router';
-import Header from './components/Header';
+import Header from './components/header/Header';
 import './App.css';
 
 function App() {

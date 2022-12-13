@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import './Header.css';
 const Header = ({ theme, setTheme }) => {
 	const switchTheme = () => {
 		const newTheme = theme === 'light' ? 'dark' : 'light';
