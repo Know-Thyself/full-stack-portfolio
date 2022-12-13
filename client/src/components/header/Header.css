@@ -81,6 +81,7 @@
 	cursor: pointer;
 	width: 50px;
 	height: 22px;
+	/* height: max-content; */
 	background: var(--radio-btn-bg);
 	border-radius: 100px;
 	border: 3px solid var(--radio-btn-border);
@@ -107,7 +108,10 @@
 	font-size: 1rem;
 }
 .sun-icon {
-	font-size: 1.12rem;
+	font-size: 1rem;
+  position: absolute;
+	top: 0;
+	right: 0;
 }
 
 .switch-checkbox:checked + .switch-label .switch-button {

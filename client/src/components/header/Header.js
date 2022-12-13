@@ -53,9 +53,9 @@ const Header = ({ theme, setTheme }) => {
 								onChange={switchTheme}
 							/>
 							<label className='switch-label' htmlFor='radio-button'>
-								<i className={theme === 'dark' ? 'fa-solid fa-moon' : 'd-none'}>
-									&nbsp;
-								</i>
+								<i className={theme === 'dark' ? 'fa-solid fa-moon' : 'd-none'} />
+									{/* &nbsp; */}
+								{/* </i> */}
 								<span className='switch-button' />
 								<span className={theme === 'light' ? 'sun-icon' : 'd-none'}>
 									☀️
