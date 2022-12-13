@@ -8,29 +8,46 @@ font-family: 'Source Sans Pro', sans-serif;
 
 :root {
 	--primary-background: #b3ae92;
+	--primary-background: #A1A2A6;
+	--primary-background: #bbbcbf;
 	/* --primary-background: #413E3D; */
 	--secondary-background: #9297B3;
-	--home-background: white;
+	/* --home-background: white; */
+	--home-background: #bbbcbf;
+	--home-background: #F8F8F8;
 	--projects-background: white;
 	--projects-container-bg: #b3ae92;
 	--hero-banner-text: 'Playfair Display', serif;
-	--primary-font-family: 'Poppins', sans-serif;
-	--secondary-font-family: 'Source Sans Pro', sans-serif;
+	--primary-font-family: 'Montserrat', sans-serif;
+	--buttons-font-family: 'Poppins', sans-serif;
+	--buttons-color: #0f0700;
+	--buttons-color: #F8F8F8;
+	
+	--home-page-buttons-bg: #4682B4;
+	--home-page-buttons-bg: #4D4DFF;
+	--home-page-buttons-bg: #4C516D;
+	/* --buttons-color: #0f0700; */
+	--secondary-font-family: 'Poppins', sans-serif;
 	--text-primary-color: #0f0700;
 	--text-secondary-color: #790326;
+	--text-secondary-color: #0f0700;
 	--nav-links-color: #413E3D;
+	--nav-links-color: #040200;
 	--button-hover-bg: #cf6138;
 	--projects-container-hover: #9e9874;
 	--active-nav-link: #014421;
-	--radio-btn-bg: #d3cfb8;
-	--radio-btn-border: #faf2c4;
+	--active-nav-link: #020128;
+	--radio-btn-bg: #bbbcbf;
+	--radio-btn-border: #F8F8F8;
 	--switch-button-bg: #32CD32;
+	--switch-button-bg: #4C516D;
 }
 
 [data-theme='dark'] {
 	/* --primary-background: #4c516d;
 	--primary-background: #2d3041; */
 	--primary-background: #1E202B;
+	/* --primary-background: #020924; */
 	/* --secondary-background: #6d684c;
 	--secondary-background: #413E3D;
 	--secondary-background: #2B281E; */
@@ -52,6 +69,9 @@ font-family: 'Source Sans Pro', sans-serif;
 	--projects-background: url('./images/background-destination-desktop.jpg');
 	--hero-banner-text: 'Playfair Display', serif;
 	--primary-font-family: 'Montserrat', sans-serif;
+	--home-page-buttons-bg: #1E202B;
+	--buttons-font-family: 'Poppins', sans-serif;
+	--buttons-color: aliceblue;
 	--secondary-font-family: 'Montserrat', sans-serif;
 	--text-primary-color: white;
 	--text-secondary-color: aliceblue;
@@ -64,9 +84,4 @@ font-family: 'Source Sans Pro', sans-serif;
 	--radio-btn-bg: #969cbd;
 	--radio-btn-border: #b0c4de;
 	--switch-button-bg: #BA0021;
-}
-
-.App {
-	width: 100%;
-	height: 100%;
 }

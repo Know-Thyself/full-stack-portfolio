@@ -1,4 +1,3 @@
-
 .home {
 	width: 100%;
 	height: 90vh;
@@ -50,6 +49,12 @@
 	margin-right: 5rem;
 }
 
+.center-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .links-wrapper {
 	display: flex;
 	justify-content: flex-start;
@@ -57,20 +62,14 @@
 	gap: 2rem;
 }
 
-.center-link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--primary-background);
-	color: var(--text-secondary-color);
-	/* color: var(--text-primary-color); */
-	font-family: var(--primary-font-family);
+	/* background-color: var(--primary-background); */
+  background-color: var(--home-page-buttons-bg);
+  color: var(--buttons-color);
+  font-family: var(--buttons-font-family);
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	text-decoration: none;
@@ -83,5 +82,5 @@
 
 .fa-github {
 	font-size: 1.25rem;
-	color: var(--text-secondary-color);
+  color: var(--buttons-color);
 }
