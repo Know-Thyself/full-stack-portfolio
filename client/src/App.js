@@ -1,7 +1,8 @@
 import { BrowserRouter } from 'react-router-dom';
 import useLocalStorage from 'use-local-storage';
-import Router from './Router';
+//import Router from './Router';
 import Header from './components/header/Header';
+import RoutesAnimator from './components/RoutesAnimator';
 import './App.css';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
 		<BrowserRouter>
 			<div className='App' data-theme={theme}>
 				<Header theme={theme} setTheme={setTheme} />
-				<Router />
+				<RoutesAnimator />
 			</div>
 		</BrowserRouter>
 	);

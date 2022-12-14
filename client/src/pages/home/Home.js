@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './Home.css';
 
 const Home = () => {
 	return (
-		<div className='home'>
+		<motion.div
+			className='home'
+			initial={{ opacity: 1 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0.895 }}
+		>
 			<section className='hero'>
 				<div className='hero-text-container'>
 					<h1 className='primary-text'>Hello & Welcome!</h1>
@@ -14,7 +20,8 @@ const Home = () => {
 					/>
 					<h3 className='subtext'>
 						Biruk here, I am a Full Stack Web Developer specialized in HTML,
-						CSS, JavaScript, React.js, Next.js, Node.js and PostgreSQL Database along with related Frameworks and Libraries.
+						CSS, JavaScript, React.js, Next.js, Node.js and PostgreSQL Database
+						along with related Frameworks and Libraries.
 						<br />
 						<br />
 						If you are looking to hire a passionate, problem solver, team
@@ -40,7 +47,7 @@ const Home = () => {
 					<h3>Some content here</h3>
 				</div> */}
 			</section>
-		</div>
+		</motion.div>
 	);
 };
 

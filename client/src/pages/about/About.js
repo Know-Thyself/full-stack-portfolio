@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import './About.css';
 
 const About = () => {
@@ -14,7 +15,12 @@ const About = () => {
 	}, []);
 
 	return (
-		<main className='about-page-main-container'>
+		<motion.main
+			className='about-page-main-container'
+			initial={{ opacity: 0.5 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0.5 }}
+		>
 			<div className='about-page-wrapper'>
 				<div className='about-img-wrapper'>
 					<img className='about-img' src='/images/about.png' alt='' />
@@ -49,7 +55,7 @@ const About = () => {
 					<div className='skill-card'></div>
 				</div>
 			</section>
-		</main>
+		</motion.main>
 	);
 };
 

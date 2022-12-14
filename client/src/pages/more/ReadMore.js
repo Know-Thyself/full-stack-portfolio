@@ -1,5 +1,6 @@
 import ReadMoreLess from 'react-show-more-text';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './ReadMore.css';
 
 const ReadMore = ({ readMore }) => {
@@ -11,7 +12,12 @@ const ReadMore = ({ readMore }) => {
 		}
 	};
 	return (
-		<div className='read-more-container'>
+		<motion.div
+			className='read-more-container'
+			initial={{ opacity: 0.5 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0.5 }}
+		>
 			<div className='read-more-project-wrapper'>
 				<h4 className='project-title'>{readMore.title}</h4>
 				<img src={`/images/${readMore.image}`} alt='' />
@@ -49,7 +55,7 @@ const ReadMore = ({ readMore }) => {
 					</a>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

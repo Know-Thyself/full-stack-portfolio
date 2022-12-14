@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import ReadMoreLess from 'react-show-more-text';
+import { motion } from 'framer-motion';
 import './Projects.css';
 
 const Projects = ({ projects, setClickedProject, setReadMore }) => {
@@ -43,7 +44,12 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 	};
 
 	return (
-		<div className='projects-root'>
+		<motion.div
+			className='projects-root'
+			initial={{ opacity: 1 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0.895 }}
+		>
 			{projects.map((project, idx) => {
 				const descriptionLines = project.description.split(/\n/);
 				return (
@@ -91,7 +97,7 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 					</div>
 				);
 			})}
-		</div>
+		</motion.div>
 	);
 };
 

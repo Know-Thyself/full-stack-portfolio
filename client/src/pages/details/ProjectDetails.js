@@ -1,4 +1,5 @@
 import ReadMoreLess from 'react-show-more-text';
+import { motion } from 'framer-motion';
 import './details.css';
 const ProjectDetails = ({ clickedProject }) => {
 	// const truncate = (str, n) => {
@@ -6,7 +7,12 @@ const ProjectDetails = ({ clickedProject }) => {
 	// };
 
 	return (
-		<div className='project-details-page'>
+		<motion.div
+			className='project-details-page'
+			initial={{ opacity: 0.5 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0.5 }}
+		>
 			<h1 className='details-title'>{clickedProject.title}</h1>
 			<div className='project-details-wrapper'>
 				<img src={`/images/${clickedProject.image}`} alt='' />
@@ -43,7 +49,7 @@ const ProjectDetails = ({ clickedProject }) => {
 					</div>
 				</section>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

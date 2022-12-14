@@ -29,6 +29,7 @@ font-family: 'Source Sans Pro', sans-serif;
 	--radio-btn-bg: #F8F8F8;
 	--radio-btn-border: #4C516D;
 	--switch-button-bg: #32CD32;
+	--switch-button-bg: #3F00FF;
 }
 
 [data-theme='dark'] {
