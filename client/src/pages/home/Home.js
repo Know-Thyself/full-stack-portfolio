@@ -3,12 +3,38 @@ import { motion } from 'framer-motion';
 import './Home.css';
 
 const Home = () => {
+	const pageVariants = {
+		initial: {
+			height: 0,
+			bottom: 0,
+		},
+		animate: {
+			height: '90vh',
+			transition: {
+				duration: 1.5,
+				ease: [0.87, 0, 0.13, 1],
+			},
+		},
+		exit: {
+			height: '90vh',
+			bottom: 0,
+		},
+	};
+	const spring = {
+		type: 'spring',
+		damping: 10,
+		stiffness: 100,
+	};
 	return (
 		<motion.div
 			className='home'
-			initial={{ opacity: 1 }}
+			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
-			exit={{ opacity: 0.895 }}
+			exit={{ opacity: 0 }}
+			transition={{
+				ease: [0.87, 0, 0.13, 1],
+				duration: 1.5,
+			}}
 		>
 			<section className='hero'>
 				<div className='hero-text-container'>
@@ -30,17 +56,21 @@ const Home = () => {
 						to the right place!
 					</h3>
 					<div className='links-wrapper'>
-						<a
+						<motion.a
 							href='https://github.com/Know-Thyself'
 							target='_blank'
 							rel='noreferrer'
 							className='link'
+							whileHover={{ scale: 1.2 }}
+							whileTap={{ scale: 0.8 }}
 						>
 							<i className='fa-brands fa-github'></i>&nbsp; GitHub
-						</a>
-						<Link to='/projects' className='link'>
-							Projects
-						</Link>
+						</motion.a>
+						<motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
+							<Link to='/projects' className='link'>
+								Projects
+							</Link>
+						</motion.div>
 					</div>
 				</div>
 				{/* <div className='hero-right'>

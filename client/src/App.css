@@ -8,39 +8,39 @@ font-family: 'Source Sans Pro', sans-serif;
 
 :root {
 	--primary-background: #bbbcbf;
-	--secondary-background: #9297B3;
-	--home-background: #F8F8F8;
-	--projects-background: #F8F8F8;
+	--secondary-background: #9297b3;
+	--home-background: #f8f8f8;
+	--projects-background: #f8f8f8;
 	--projects-container-bg: #b3ae92;
 	--hero-banner-text: 'Playfair Display', serif;
 	--primary-font-family: 'Montserrat', sans-serif;
 	--buttons-font-family: 'Poppins', sans-serif;
-	--buttons-color: #F8F8F8;
-	--home-page-buttons-bg: #4C516D;
+	--buttons-color: #f8f8f8;
+	--home-page-buttons-bg: #4c516d;
 	--secondary-font-family: 'Poppins', sans-serif;
 	--text-primary-color: #0f0700;
 	--text-secondary-color: #790326;
 	--text-secondary-color: #0f0700;
-	--nav-links-color: #413E3D;
+	--nav-links-color: #413e3d;
 	--nav-links-color: #040200;
 	--button-hover-bg: #cf6138;
 	--projects-container-hover: #9e9874;
 	--active-nav-link: #020128;
-	--radio-btn-bg: #F8F8F8;
-	--radio-btn-border: #4C516D;
-	--switch-button-bg: #32CD32;
-	--switch-button-bg: #3F00FF;
+	--radio-btn-bg: #f8f8f8;
+	--radio-btn-border: #4c516d;
+	--switch-button-bg: #32cd32;
+	--switch-button-bg: #3f00ff;
 }
 
 [data-theme='dark'] {
-	--primary-background: #1E202B;
+	--primary-background: #1e202b;
 	/* --primary-background: #020924; */
 	/* --secondary-background: #6d684c;
 	--secondary-background: #413E3D;
 	--secondary-background: #2B281E; */
-	--secondary-background: #3F3D2D;
-	--secondary-background: #2B221E;
-	--secondary-background: #1E272B;
+	--secondary-background: #3f3d2d;
+	--secondary-background: #2b221e;
+	--secondary-background: #1e272b;
 	/* --secondary-background: #221E2B; */
 	/* --secondary-background: #221E2B;
 	--secondary-background: #333649;
@@ -48,15 +48,15 @@ font-family: 'Source Sans Pro', sans-serif;
 	 */
 	/* --projects-container-bg: #4c516d;
 	--projects-container-bg: #1E202B; */
-	
-	--projects-container-bg: #221E2B;
-	--projects-container-bg: #1E202B;
+
+	--projects-container-bg: #221e2b;
+	--projects-container-bg: #1e202b;
 	--projects-container-bg: #2d3041;
 	--home-background: url('./images/background-home-desktop.jpg');
 	--projects-background: url('./images/background-destination-desktop.jpg');
 	--hero-banner-text: 'Playfair Display', serif;
 	--primary-font-family: 'Montserrat', sans-serif;
-	--home-page-buttons-bg: #1E202B;
+	--home-page-buttons-bg: #1e202b;
 	--buttons-font-family: 'Poppins', sans-serif;
 	--buttons-color: aliceblue;
 	--secondary-font-family: 'Montserrat', sans-serif;
@@ -64,11 +64,21 @@ font-family: 'Source Sans Pro', sans-serif;
 	--text-secondary-color: aliceblue;
 	--button-hover-bg: #309ec7;
 	--projects-container-hover: #61678b;
-	--active-nav-link: #FF003F;
+	--active-nav-link: #ff003f;
 	--active-nav-link: #d9f3eb;
 	--nav-links-color: #d6fae5;
 	--nav-links-color: #e7e7c1;
 	--radio-btn-bg: #969cbd;
 	--radio-btn-border: #b0c4de;
-	--switch-button-bg: #BA0021;
+	--switch-button-bg: #ba0021;
+}
+
+.App {
+	height: 100%;
+	width: 100%;
+	background: var(--projects-background);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 3%;
 }

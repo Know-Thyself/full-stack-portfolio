@@ -1,7 +1,7 @@
 .projects-root {
 	width: 94%;
-	margin: auto;
-	margin-top: 0;
+	margin: 3% auto;
+	/* margin-top: 0; */
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	align-content: flex-start;
@@ -9,7 +9,7 @@
 	grid-auto-rows: auto;
 	grid-auto-columns: auto;
 	gap: 2rem;
-	background: var(--projects-background);
+	/* background: var(--projects-background); */
 	/* background: #333649;
 	background: #1E272B; */
 	/* background: #2B291E; */
@@ -21,7 +21,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
-	padding: 3%;
+	/* padding: 3%; */
 }
 
 /* .theme-icons-and-radio-btn {

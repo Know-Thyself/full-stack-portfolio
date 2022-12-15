@@ -17,9 +17,10 @@ const About = () => {
 	return (
 		<motion.main
 			className='about-page-main-container'
-			initial={{ opacity: 0.5 }}
+			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
-			exit={{ opacity: 0.5 }}
+			exit={{ opacity: 0 }}
+			transition={{ ease: [0.87, 0, 0.13, 1], duration: 1.5 }}
 		>
 			<div className='about-page-wrapper'>
 				<div className='about-img-wrapper'>

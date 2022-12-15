@@ -5,6 +5,21 @@ import './Projects.css';
 
 const Projects = ({ projects, setClickedProject, setReadMore }) => {
 	const navigate = useNavigate();
+	const pageVariants = {
+		initial: {
+			height: '100%',
+		},
+		animate: {
+			height: 0,
+			transition: {
+				duration: 1.5,
+				ease: [0.87, 0, 0.13, 1],
+			},
+		},
+		// exit: {
+		// 	height: '100%',
+		// },
+	};
 
 	const handleClick = (e) => {
 		let selected = projects[e.currentTarget.id];
@@ -42,13 +57,38 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 			}
 		}
 	};
+	const spring = {
+		type: 'spring',
+		damping: 10,
+		stiffness: 100,
+	};
 
 	return (
 		<motion.div
 			className='projects-root'
-			initial={{ opacity: 1 }}
+			// initial={{ opacity: 1 }}
+			// animate={{ opacity: 1 }}
+			// exit={{ opacity: 0.895 }}
+			// animate={{ x: [null, 100, 0] }}
+			// animate={{
+			// 	scale: [1, 2, 2, 1, 1],
+			// 	rotate: [0, 0, 270, 270, 0],
+			// 	borderRadius: ['20%', '20%', '50%', '50%', '20%'],
+			// }}
+			// initial='initial'
+			// animate='animate'
+			// exit='exit'
+			// variants={pageVariants}
+			// style={{ left: 0 }}
+			// animate={{ left: 100 }}
+
+			// transition={spring}
+
+			// animate={{ scale: 1 }}
+			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
-			exit={{ opacity: 0.895 }}
+			exit={{ opacity: 0 }}
+			transition={{ ease: [0.87, 0, 0.13, 1], duration: 1.5 }}
 		>
 			{projects.map((project, idx) => {
 				const descriptionLines = project.description.split(/\n/);
