@@ -21,7 +21,7 @@
 	margin-right: 2.5rem;
 	font-family: 'Poppins', sans-serif;
 	font-family: var(--primary-font-family);
-	font-weight: 400;
+	/* font-weight: 400; */
 	text-transform: uppercase;
 	font-size: 1rem;
 }
@@ -30,15 +30,17 @@
 	text-decoration: none;
 	/* color: var(--text-secondary-color); */
 	color: var(--nav-links-color);
+	font-weight: var(--nav-links-font-weight);
 }
 
 .nav-link:hover {
 	color: var(--active-nav-link);
+	font-weight: var(--active-nav-link-font-weight);
 }
 
 .active {
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: var(--active-nav-link-font-weight);
 	color: var(--active-nav-link);
 }
 

@@ -65,78 +65,61 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 
 	return (
 		<motion.div
-			className='projects-root'
-			// initial={{ opacity: 1 }}
-			// animate={{ opacity: 1 }}
-			// exit={{ opacity: 0.895 }}
-			// animate={{ x: [null, 100, 0] }}
-			// animate={{
-			// 	scale: [1, 2, 2, 1, 1],
-			// 	rotate: [0, 0, 270, 270, 0],
-			// 	borderRadius: ['20%', '20%', '50%', '50%', '20%'],
-			// }}
-			// initial='initial'
-			// animate='animate'
-			// exit='exit'
-			// variants={pageVariants}
-			// style={{ left: 0 }}
-			// animate={{ left: 100 }}
-
-			// transition={spring}
-
-			// animate={{ scale: 1 }}
+			className='projects-main-container'
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
 			transition={{ ease: [0.87, 0, 0.13, 1], duration: 1.5 }}
 		>
-			{projects.map((project, idx) => {
-				const descriptionLines = project.description.split(/\n/);
-				return (
-					<div
-						key={idx}
-						id={idx}
-						className='projects-wrapper'
-						onClick={handleClick}
-					>
-						<h4 className='project-title'>{project.title}</h4>
-						<img src={`/images/${project.image}`} alt='' />
-						<div className='read-more-read-less-wrapper'>
-							<ReadMoreLess
-								className='read-more-less content-css'
-								lines={3}
-								more='read more ▼'
-								less='read less ▲'
-								truncatedEndingComponent={'... '}
-								anchorClass='anchor-css-class'
-								expanded={false}
-							>
-								{descriptionLines.map((line, idx) => (
-									<p>{line}</p>
-								))}
-							</ReadMoreLess>
+			<div className='projects-wrapper'>
+				{projects.map((project, idx) => {
+					const descriptionLines = project.description.split(/\n/);
+					return (
+						<div
+							key={idx}
+							id={idx}
+							className='project-wrapper'
+							onClick={handleClick}
+						>
+							<h4 className='project-title'>{project.title}</h4>
+							<img src={`/images/${project.image}`} alt='' />
+							<div className='read-more-read-less-wrapper'>
+								<ReadMoreLess
+									className='read-more-less content-css'
+									lines={3}
+									more='read more ▼'
+									less='read less ▲'
+									truncatedEndingComponent={'... '}
+									anchorClass='anchor-css-class'
+									expanded={false}
+								>
+									{descriptionLines.map((line, idx) => (
+										<p>{line}</p>
+									))}
+								</ReadMoreLess>
+							</div>
+							<div className='project-links-wrapper'>
+								<a
+									href={project.repository}
+									target='_blank'
+									rel='noreferrer'
+									className='github-link'
+								>
+									<i className='fa-brands fa-github'></i>&nbsp; GitHub
+								</a>
+								<a
+									href={project.url}
+									target='_blank'
+									rel='noreferrer'
+									className='live-demo-link'
+								>
+									Live Demo
+								</a>
+							</div>
 						</div>
-						<div className='project-links-wrapper'>
-							<a
-								href={project.repository}
-								target='_blank'
-								rel='noreferrer'
-								className='github-link'
-							>
-								<i className='fa-brands fa-github'></i>&nbsp; GitHub
-							</a>
-							<a
-								href={project.url}
-								target='_blank'
-								rel='noreferrer'
-								className='live-demo-link'
-							>
-								Live Demo
-							</a>
-						</div>
-					</div>
-				);
-			})}
+					);
+				})}
+			</div>
 		</motion.div>
 	);
 };
