@@ -11,7 +11,6 @@ const ProjectDetails = ({ clickedProject }) => {
 			transition={{
 				type: 'spring',
 				stiffness: 40,
-				ease: [0.87, 0, 0.13, 1],
 				duration: 1.5,
 			}}
 		>

@@ -19,13 +19,13 @@
 	flex: 1;
 } */
 .about-img-wrapper {
-	width: 200px;
+	width: fit-content;
 	background: var(--projects-background);
 	margin: 3rem auto 5rem auto;
 }
 
 .about-img {
-	width: inherit;
+	width: 200px;
 	position: relative;
 	top: 2rem;
 	left: 2rem;

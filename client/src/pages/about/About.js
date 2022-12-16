@@ -14,18 +14,26 @@ const About = () => {
 			.catch((error) => console.error(error));
 	}, []);
 
+	const springVariant = {
+		start: {
+			y: '100%',
+		},
+		end: {
+			y: 0,
+			transition: {
+				type: 'spring',
+				stiffness: 40,
+				duration: 1.5,
+			},
+		},
+	};
+
 	return (
 		<motion.main
 			className='about-page-main-container'
-			initial={{ y: '100%' }}
-			animate={{ y: 0 }}
-			transition={{
-				type: 'spring',
-				stiffness: 40,
-				damping: 10,
-				ease: [0.87, 0, 0.13, 1],
-				duration: 1,
-			}}
+			variants={springVariant}
+			initial='start'
+			animate='end'
 		>
 			<div className='about-page-wrapper'>
 				<div className='about-img-wrapper'>

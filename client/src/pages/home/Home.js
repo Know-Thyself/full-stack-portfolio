@@ -11,8 +11,7 @@ const Home = () => {
 			transition={{
 				type: 'spring',
 				stiffness: 40,
-				ease: [0.87, 0, 0.13, 1],
-				duration: 1,
+				duration: 1.5,
 			}}
 		>
 			<section className='hero'>
