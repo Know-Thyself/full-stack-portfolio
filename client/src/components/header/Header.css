@@ -5,6 +5,8 @@
 	height: 10vh;
 	background-color: var(--primary-background);
 	color: var(--text-secondary-color);
+	z-index: 100;
+	position: relative;
 }
 
 .logo {

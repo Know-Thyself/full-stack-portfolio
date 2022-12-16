@@ -28,13 +28,9 @@ const Home = () => {
 	return (
 		<motion.div
 			className='home'
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}
-			transition={{
-				ease: [0.87, 0, 0.13, 1],
-				duration: 1.5,
-			}}
+			initial={{ y: '100%' }}
+			animate={{ y: 0 }}
+			transition={{ type: 'spring', stiffness: 50, ease: [0.87, 0, 0.13, 1], duration: 1 }}
 		>
 			<section className='hero'>
 				<div className='hero-text-container'>

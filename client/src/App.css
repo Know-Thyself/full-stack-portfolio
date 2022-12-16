@@ -8,6 +8,7 @@ font-family: 'Source Sans Pro', sans-serif;
 
 :root {
 	--primary-background: #bbbcbf;
+	--primary-background: #c5c5c5;
 	--secondary-background: #9297b3;
 	--home-background: #f8f8f8;
 	--projects-background: #f8f8f8;
@@ -44,9 +45,17 @@ font-family: 'Source Sans Pro', sans-serif;
 	--secondary-background: #121212;
 	--secondary-background: black;
 	--secondary-background: #030305;
+	--secondary-background: #030305;
+	/* --secondary-background: #1A1A1A; */
+	--projects-container-bg: #1A1A1A;
 	--projects-container-bg: #1A1A1A;
 	--projects-bg: #343434;
 	--projects-bg: #383842;
+	--projects-bg: #1B1B12;
+	--projects-bg: #2d2c2e;
+	--projects-bg: #232125;
+	--projects-bg: #2e2d30;
+	/* --projects-bg: #2e2e47; */
 	--home-background: url('./images/background-home-desktop.jpg');
 	--projects-background: url('./images/background-destination-desktop.jpg');
 	--hero-banner-text: 'Playfair Display', serif;
@@ -59,9 +68,10 @@ font-family: 'Source Sans Pro', sans-serif;
 	--secondary-font-family: 'Montserrat', sans-serif;
 	--text-primary-color: white;
 	--home-font-weight: 300;
-	--text-secondary-color: aliceblue;
+	--text-secondary-color: #f8f8f8;;
 	--button-hover-bg: #309ec7;
 	--projects-container-hover: #61678b;
+	--projects-container-hover: #343434;
 	--active-nav-link: #fd3a57;
 	--active-nav-link: #c5d4d8;
 	--nav-links-color: #afc1ca;
@@ -81,4 +91,5 @@ font-family: 'Source Sans Pro', sans-serif;
 	background-repeat: no-repeat;
 	background-size: cover; */
 	padding-bottom: 3%;
+	position: absolute;
 }

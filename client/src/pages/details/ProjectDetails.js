@@ -9,9 +9,14 @@ const ProjectDetails = ({ clickedProject }) => {
 	return (
 		<motion.div
 			className='project-details-page'
-			initial={{ opacity: 0.5 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0.5 }}
+			initial={{ y: '100%' }}
+			animate={{ y: 0 }}
+			transition={{
+				type: 'spring',
+				stiffness: 40,
+				ease: [0.87, 0, 0.13, 1],
+				duration: 1.5,
+			}}
 		>
 			<h1 className='details-title'>{clickedProject.title}</h1>
 			<div className='project-details-wrapper'>

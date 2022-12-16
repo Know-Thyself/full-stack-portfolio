@@ -36,7 +36,7 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 			e.target.innerText === 'read more ▼' ||
 			e.target.innerText === 'read less ▲'
 		) {
-			let wrappers = document.querySelectorAll('.projects-wrapper');
+			let wrappers = document.querySelectorAll('.project-wrapper');
 			for (let i = 0; i < wrappers.length; i++) {
 				const element = wrappers[i];
 				if (
@@ -44,7 +44,7 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 					e.target.innerText === 'read more ▼'
 				) {
 					element.style.height = '100%';
-					navigate('/readmore');
+					// navigate('/readmore');
 				} else if (
 					element.id === e.currentTarget.id &&
 					e.target.innerText === 'read less ▲'
@@ -66,10 +66,15 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 	return (
 		<motion.div
 			className='projects-main-container'
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}
-			transition={{ ease: [0.87, 0, 0.13, 1], duration: 1.5 }}
+			initial={{ y: '100%' }}
+			animate={{ y: 0 }}
+			// exit={{ y: '100%' }}
+			transition={{
+				type: 'spring',
+				stiffness: 50,
+				ease: [0.87, 0, 0.13, 1],
+				duration: 1.5,
+			}}
 		>
 			<div className='projects-wrapper'>
 				{projects.map((project, idx) => {
