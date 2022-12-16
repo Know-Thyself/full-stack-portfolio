@@ -3,28 +3,6 @@ import { motion } from 'framer-motion';
 import './Home.css';
 
 const Home = () => {
-	const pageVariants = {
-		initial: {
-			height: 0,
-			bottom: 0,
-		},
-		animate: {
-			height: '90vh',
-			transition: {
-				duration: 1.5,
-				ease: [0.87, 0, 0.13, 1],
-			},
-		},
-		exit: {
-			height: '90vh',
-			bottom: 0,
-		},
-	};
-	const spring = {
-		type: 'spring',
-		damping: 10,
-		stiffness: 100,
-	};
 	return (
 		<motion.div
 			className='home'

@@ -2,9 +2,6 @@ import ReadMoreLess from 'react-show-more-text';
 import { motion } from 'framer-motion';
 import './details.css';
 const ProjectDetails = ({ clickedProject }) => {
-	// const truncate = (str, n) => {
-	// 	return str.length > n ? str.slice(0, n - 1) + ' ...' : str;
-	// };
 
 	return (
 		<motion.div
@@ -22,7 +19,6 @@ const ProjectDetails = ({ clickedProject }) => {
 			<div className='project-details-wrapper'>
 				<img src={`/images/${clickedProject.image}`} alt='' />
 				<section>
-					{/* <p>{truncate(clickedProject.description, 700)}</p> */}
 					<ReadMoreLess
 						className='read-more-less content-css'
 						lines={7}

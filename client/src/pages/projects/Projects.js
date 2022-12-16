@@ -5,21 +5,6 @@ import './Projects.css';
 
 const Projects = ({ projects, setClickedProject, setReadMore }) => {
 	const navigate = useNavigate();
-	const pageVariants = {
-		initial: {
-			height: '100%',
-		},
-		animate: {
-			height: 0,
-			transition: {
-				duration: 1.5,
-				ease: [0.87, 0, 0.13, 1],
-			},
-		},
-		// exit: {
-		// 	height: '100%',
-		// },
-	};
 
 	const handleClick = (e) => {
 		let selected = projects[e.currentTarget.id];
@@ -56,11 +41,6 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 				}
 			}
 		}
-	};
-	const spring = {
-		type: 'spring',
-		damping: 10,
-		stiffness: 100,
 	};
 
 	return (
