@@ -68,10 +68,9 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 			className='projects-main-container'
 			initial={{ y: '100%' }}
 			animate={{ y: 0 }}
-			// exit={{ y: '100%' }}
 			transition={{
 				type: 'spring',
-				stiffness: 50,
+				stiffness: 40,
 				ease: [0.87, 0, 0.13, 1],
 				duration: 1.5,
 			}}

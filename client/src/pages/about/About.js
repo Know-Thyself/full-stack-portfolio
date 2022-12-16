@@ -21,7 +21,7 @@ const About = () => {
 			animate={{ y: 0 }}
 			transition={{
 				type: 'spring',
-				stiffness: 50,
+				stiffness: 40,
 				damping: 10,
 				ease: [0.87, 0, 0.13, 1],
 				duration: 1,

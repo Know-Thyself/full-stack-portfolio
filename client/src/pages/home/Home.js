@@ -30,7 +30,12 @@ const Home = () => {
 			className='home'
 			initial={{ y: '100%' }}
 			animate={{ y: 0 }}
-			transition={{ type: 'spring', stiffness: 50, ease: [0.87, 0, 0.13, 1], duration: 1 }}
+			transition={{
+				type: 'spring',
+				stiffness: 40,
+				ease: [0.87, 0, 0.13, 1],
+				duration: 1,
+			}}
 		>
 			<section className='hero'>
 				<div className='hero-text-container'>
