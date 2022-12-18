@@ -11,10 +11,11 @@ const Contact = () => {
 			transition: {
 				type: 'spring',
 				stiffness: 40,
-				duration: 1.5,
+				damping: 10,
 			},
 		},
 	};
+
 	return (
 		<motion.div variants={springVariant} initial='start' animate='end'>
 			<h1>Contact Page</h1>

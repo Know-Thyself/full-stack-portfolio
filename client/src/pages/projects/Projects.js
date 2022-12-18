@@ -45,18 +45,17 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 
 	const springVariant = {
 		start: {
-			y: '100%'
+			y: '100%',
 		},
 		end: {
 			y: 0,
 			transition: {
 				type: 'spring',
 				stiffness: 40,
-				duration: 1.5,
-				when: 'beforeChildren'
-			}
-		}
-	}
+				damping: 10,
+			},
+		},
+	};
 
 	return (
 		<motion.div

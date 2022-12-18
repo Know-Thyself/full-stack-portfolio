@@ -3,16 +3,26 @@ import { motion } from 'framer-motion';
 import './Home.css';
 
 const Home = () => {
+	const springVariant = {
+		start: {
+			y: '100%',
+		},
+		end: {
+			y: 0,
+			transition: {
+				type: 'spring',
+				stiffness: 40,
+				damping: 10,
+			},
+		},
+	};
+
 	return (
 		<motion.div
 			className='home'
-			initial={{ y: '100%' }}
-			animate={{ y: 0 }}
-			transition={{
-				type: 'spring',
-				stiffness: 40,
-				duration: 1.5,
-			}}
+			variants={springVariant}
+			initial='start'
+			animate='end'
 		>
 			<section className='hero'>
 				<div className='hero-text-container'>

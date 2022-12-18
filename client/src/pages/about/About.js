@@ -23,7 +23,7 @@ const About = () => {
 			transition: {
 				type: 'spring',
 				stiffness: 40,
-				duration: 1.5,
+				damping: 10,
 			},
 		},
 	};
