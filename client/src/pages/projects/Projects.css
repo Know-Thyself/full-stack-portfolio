@@ -23,6 +23,7 @@
 	background-color: var(--projects-container-bg);
 	cursor: pointer;
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -37,6 +38,21 @@
 	box-shadow: inset 1000px 0 0 0 var(--projects-container-hover);
 }
 
+.tooltip {
+	visibility: hidden;
+  width: max-content;
+  background-color: var(--primary-background);
+  color: var(--text-primary-color);
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+}
+
+.project-wrapper:hover .tooltip {
+  visibility: visible;
+}
 .project-title {
 	width: 100%;
 	background-color: var(--projects-bg);

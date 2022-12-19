@@ -79,6 +79,7 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 						>
 							<h4 className='project-title'>{project.title}</h4>
 							<img src={`/images/${project.image}`} alt='' />
+							<span className='tooltip'>Click to view project details</span>
 							{/* <div className='read-more-read-less-wrapper'>
 								<ReadMoreLess
 									className='read-more-less content-css'
