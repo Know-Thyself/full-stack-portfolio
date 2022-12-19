@@ -12,6 +12,9 @@ const Contact = () => {
 				type: 'spring',
 				stiffness: 40,
 				damping: 10,
+				restSpeed: 0.5,
+				velocity: 3,
+				restDelta: 0.5,
 			},
 		},
 	};

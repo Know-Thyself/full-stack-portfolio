@@ -13,6 +13,9 @@ const Home = () => {
 				type: 'spring',
 				stiffness: 40,
 				damping: 10,
+				restSpeed: 0.5,
+				velocity: 3,
+				restDelta: 0.5,
 			},
 		},
 	};
@@ -49,12 +52,19 @@ const Home = () => {
 							target='_blank'
 							rel='noreferrer'
 							className='link'
-							whileHover={{ scale: 1.2 }}
+							whileHover={{
+								scale: 1.2,
+							}}
 							whileTap={{ scale: 0.8 }}
 						>
 							<i className='fa-brands fa-github'></i>&nbsp; GitHub
 						</motion.a>
-						<motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
+						<motion.div
+							whileHover={{
+								scale: 1.2,
+							}}
+							whileTap={{ scale: 0.8 }}
+						>
 							<Link to='/projects' className='link'>
 								Projects
 							</Link>

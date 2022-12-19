@@ -16,7 +16,7 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 			e.target.innerText !== 'read more ▼' &&
 			e.target.innerText !== 'read less ▲'
 		) {
-			navigate('/details');
+			navigate('/readmore');
 		} else if (
 			e.target.innerText === 'read more ▼' ||
 			e.target.innerText === 'read less ▲'
@@ -53,6 +53,9 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 				type: 'spring',
 				stiffness: 40,
 				damping: 10,
+				restSpeed: 0.5,
+				velocity: 3,
+				restDelta: 0.5,
 			},
 		},
 	};
@@ -76,7 +79,7 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 						>
 							<h4 className='project-title'>{project.title}</h4>
 							<img src={`/images/${project.image}`} alt='' />
-							<div className='read-more-read-less-wrapper'>
+							{/* <div className='read-more-read-less-wrapper'>
 								<ReadMoreLess
 									className='read-more-less content-css'
 									lines={3}
@@ -90,7 +93,7 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 										<p>{line}</p>
 									))}
 								</ReadMoreLess>
-							</div>
+							</div> */}
 							<div className='project-links-wrapper'>
 								<a
 									href={project.repository}

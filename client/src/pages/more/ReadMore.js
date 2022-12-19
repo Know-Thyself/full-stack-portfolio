@@ -8,7 +8,8 @@ const ReadMore = ({ readMore }) => {
 	const navigate = useNavigate();
 	const handleClick = (e) => {
 		if (e.target.innerText === 'read less ▲') {
-			navigate('/projects');
+			// navigate('/projects');
+			console.log('yes')
 		}
 	};
 	return (
@@ -29,7 +30,7 @@ const ReadMore = ({ readMore }) => {
 						less='read less ▲'
 						truncatedEndingComponent={'... '}
 						anchorClass='anchor-css-class'
-						expanded={true}
+						expanded={false}
 					>
 						{descriptionLines.map((line, idx) => (
 							<p>{line}</p>
