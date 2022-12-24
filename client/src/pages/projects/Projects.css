@@ -5,11 +5,11 @@
 }
 
 .projects-wrapper {
-	width: 94%;
-	padding: 3% 0;
+	width: 80%;
+	padding: 2rem 0;
 	margin: auto;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	align-content: flex-start;
 	justify-content: center;
 	grid-auto-rows: auto;
@@ -41,18 +41,18 @@
 
 .tooltip {
 	visibility: hidden;
-  width: max-content;
-  background-color: var(--primary-background);
-  color: var(--text-primary-color);
-  text-align: center;
-  border-radius: 4px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
+	width: max-content;
+	background-color: var(--primary-background);
+	color: var(--text-primary-color);
+	text-align: center;
+	border-radius: 4px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
 }
 
 .project-wrapper:hover .tooltip {
-  visibility: visible;
+	visibility: visible;
 }
 .project-title {
 	width: 100%;
@@ -117,4 +117,27 @@
 .fa-github {
 	font-size: 1.12rem;
 	color: var(--text-secondary-color);
+}
+
+@media screen and (min-width: 764px) {
+	.projects-wrapper {
+		width: 90%;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 1224px) {
+	.projects-wrapper {
+		grid-template-columns: repeat(3, 1fr);
+		width: 94%;
+		padding: 3% 0;
+	}
+}
+
+@media screen and (min-width: 1548px) {
+	.projects-wrapper {
+		grid-template-columns: repeat(4, 1fr);
+		width: 94%;
+		padding: 3% 0;
+	}
 }
