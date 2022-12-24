@@ -1,70 +1,93 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import DarkMode from '../switch/DarkMode';
 import './Header.css';
+
 const Header = ({ theme, setTheme }) => {
-	const switchTheme = () => {
-		const newTheme = theme === 'light' ? 'dark' : 'light';
-		setTheme(newTheme);
-		theme === 'light' ? setIsChecked(false) : setIsChecked(true);
-		setIsChecked(!isChecked);
+	const [toggleMenu, setToggleMenu] = useState(false);
+	const [checked, setChecked] = useState(false);
+	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+	const toggleNav = () => {
+		setToggleMenu(!toggleMenu);
+		setChecked(!checked);
 	};
-	const [isChecked, setIsChecked] = useState(() =>
-		theme === 'dark' ? true : false
-	);
+	
+	function screenTest(e) {
+		if (screenWidth <= 667) {
+			setToggleMenu(!toggleMenu);
+			setToggleMenu(false);
+			setChecked(!checked);
+		} 
+	}
+
+	useEffect(() => {
+		const changeWidth = () => {
+			setScreenWidth(window.innerWidth);
+		};
+		window.addEventListener('resize', changeWidth);
+		return () => {
+			window.removeEventListener('resize', changeWidth);
+		};
+	}, []);
 
 	return (
 		<header className='header'>
-			<img src='/images/placeholder-logo.png' alt='logo' className='logo' />
-			<nav className='nav-links'>
-				<NavLink
-					to='/'
-					className={({ isActive }) => (isActive ? 'active' : 'nav-link')}
-				>
-					Home
-				</NavLink>
-				<NavLink
-					to='/projects'
-					className={({ isActive }) => (isActive ? 'active' : 'nav-link')}
-				>
-					Projects
-				</NavLink>
-				<NavLink
-					to='/about'
-					className={({ isActive }) => (isActive ? 'active' : 'nav-link')}
-				>
-					About
-				</NavLink>
-				<NavLink
-					to='/contact'
-					className={({ isActive }) => (isActive ? 'active' : 'nav-link')}
-				>
-					Contact
-				</NavLink>
-				<div className='theme-icons-and-radio-btn'>
-					<div className='radio-switch'>
-						<div className='light-dark-mode'>
-							<input
-								className='switch-checkbox'
-								id='radio-button'
-								name='dark-mode'
-								value='dark-mode'
-								type='checkbox'
-								checked={isChecked}
-								onChange={switchTheme}
-							/>
-							<label className='switch-label' htmlFor='radio-button'>
-								<i className={theme === 'dark' ? 'fa-solid fa-moon' : 'd-none'} />
-									{/* &nbsp; */}
-								{/* </i> */}
-								<span className='switch-button' />
-								<span className={theme === 'light' ? 'sun-icon' : 'd-none'}>
-									☀️
-								</span>
-							</label>
-						</div>
-					</div>
-				</div>
-			</nav>
+			<img className='logo' src='/images/placeholder-logo.png' alt='logo' />
+			<div className='nav_wrapper'>
+				<menu className='hamburger-menu'>
+					<input
+						id='menu__toggle'
+						type='checkbox'
+						checked={checked}
+						onChange={toggleNav}
+					/>
+					<label className='menu__btn' for='menu__toggle'>
+						<span></span>
+					</label>
+					{(toggleMenu || screenWidth > 667) && (
+						<nav className='menu__box'>
+							<NavLink
+								to='/'
+								className={({ isActive }) =>
+									isActive ? 'active' : 'menu__item'
+								}
+								onClick={screenTest}
+							>
+								Home
+							</NavLink>
+							<NavLink
+								to='/projects'
+								className={({ isActive }) =>
+									isActive ? 'active' : 'menu__item'
+								}
+								onClick={screenTest}
+							>
+								Projects
+							</NavLink>
+							<NavLink
+								to='/about'
+								className={({ isActive }) =>
+									isActive ? 'active' : 'menu__item'
+								}
+								onClick={screenTest}
+							>
+								About
+							</NavLink>
+							<NavLink
+								to='/contact'
+								className={({ isActive }) =>
+									isActive ? 'active' : 'menu__item'
+								}
+								onClick={screenTest}
+							>
+								Contact
+							</NavLink>
+						</nav>
+					)}
+				</menu>
+				<DarkMode theme={theme} setTheme={setTheme} />
+			</div>
 		</header>
 	);
 };

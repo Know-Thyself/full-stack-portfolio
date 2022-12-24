@@ -1,6 +1,7 @@
 .projects-main-container {
 	width: 100%;
 	background-color: var(--secondary-background);
+	padding-top: 70px;
 }
 
 .projects-wrapper {

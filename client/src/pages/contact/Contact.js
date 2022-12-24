@@ -20,7 +20,12 @@ const Contact = () => {
 	};
 
 	return (
-		<motion.div variants={springVariant} initial='start' animate='end'>
+		<motion.div
+			variants={springVariant}
+			initial='start'
+			animate='end'
+			className='wrapper'
+		>
 			<h1>Contact Page</h1>
 		</motion.div>
 	);

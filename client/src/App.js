@@ -1,11 +1,13 @@
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import useLocalStorage from 'use-local-storage';
 import Router from './Router';
-import Header from './components/header/Header';
-//import RoutesAnimator from './components/RoutesAnimator';
+import Header from './components/header/Header'
 import './App.css';
 
 function App() {
+	const [open, setOpen] = React.useState(false);
+	const node = React.useRef();
 	const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 	const [theme, setTheme] = useLocalStorage(
 		'theme',

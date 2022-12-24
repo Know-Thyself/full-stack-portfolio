@@ -1,6 +1,8 @@
 .about-page-main-container {
 	width: 100%;
 	background-color: var(--secondary-background);
+	font-family: var(--secondary-font-family);
+	padding-top: 70px;
 }
 .about-page-wrapper {
 	display: flex;
