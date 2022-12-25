@@ -69,8 +69,6 @@
 	position: absolute;
 	width: 100%;
 	height: 3px;
-	background-color: #616161;
-	background-color: red;
 	background-color: var(--text-secondary-color);
 	transition-duration: 0.25s;
 }
@@ -107,9 +105,10 @@
 	color: var(--nav-links-color);
 	font-weight: var(--nav-links-font-weight);
 	border-bottom: solid 1px var(--text-primary-color);
-	font-size: 20px;
-	font-weight: 400;
+	font-size: 1rem;
+	font-weight: var(--nav-links-font-weight);
 	text-decoration: none;
+	text-transform: uppercase;
 	transition-duration: 0.25s;
 }
 .menu__item:hover {
@@ -150,13 +149,7 @@
 		align-items: center;
 		margin-right: 1rem;
 		padding: 0;
-		font-family: 'Poppins', sans-serif;
-		font-family: var(--primary-font-family);
-		color: var(--text-secondary-color);
-		/* font-weight: 400; */
-		text-transform: uppercase;
-		font-size: 1rem;
-		border: none;
+		border-bottom: 0px solid var(--primary-background);
 		
 	}
 	.menu__btn {

@@ -3,8 +3,10 @@
   width: 100%;
   left: 0;
   bottom: 0;
-  height: 16px;
-  padding: 2rem 0;
+  height: 48px;
   background-color: var(--primary-background);
   color: var(--text-primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
