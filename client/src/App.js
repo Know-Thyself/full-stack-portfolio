@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import useLocalStorage from 'use-local-storage';
 import Router from './Router';
-import Header from './components/header/Header'
-import Footer from './components/footer/Footer'
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 import './App.css';
 
 function App() {

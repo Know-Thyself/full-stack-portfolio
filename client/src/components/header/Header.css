@@ -99,11 +99,9 @@
 .menu__item,
 .active {
 	display: block;
-	padding: 12px 24px;
-	color: #333;
+	padding: 12px 0;
 	font-family: var(--primary-font-family);
 	color: var(--nav-links-color);
-	font-weight: var(--nav-links-font-weight);
 	border-bottom: solid 1px var(--text-primary-color);
 	font-size: 1rem;
 	font-weight: var(--nav-links-font-weight);
@@ -111,7 +109,7 @@
 	text-transform: uppercase;
 	transition-duration: 0.25s;
 }
-.menu__item:hover {
+.menu__box .menu__item:hover {
 	color: var(--active-nav-link);
 	font-weight: var(--active-nav-link-font-weight);
 	background-color: var(--primary-background);
