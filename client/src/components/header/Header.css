@@ -82,7 +82,7 @@
 }
 .menu__box {
 	display: block;
-	position: fixed;
+	position: absolute;
 	top: 70px;
 	right: -100%;
 	width: 100%;
@@ -99,7 +99,7 @@
 .menu__item,
 .active {
 	display: block;
-	padding: 12px 0;
+	padding: 12px 24px;
 	font-family: var(--primary-font-family);
 	color: var(--nav-links-color);
 	border-bottom: solid 1px var(--text-primary-color);
@@ -109,7 +109,7 @@
 	text-transform: uppercase;
 	transition-duration: 0.25s;
 }
-.menu__box .menu__item:hover {
+.menu__item:hover {
 	color: var(--active-nav-link);
 	font-weight: var(--active-nav-link-font-weight);
 	background-color: var(--primary-background);

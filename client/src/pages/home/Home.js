@@ -5,7 +5,7 @@ import './Home.css';
 const Home = () => {
 		const springVariant = {
 			start: {
-				y: 300,
+				y: -100,
 				opacity: 0,
 			},
 			end: {
@@ -22,7 +22,7 @@ const Home = () => {
 				},
 			},
 			exit: {
-				y: -300,
+				y: 100,
 				opacity: 0,
 			},
 		};
