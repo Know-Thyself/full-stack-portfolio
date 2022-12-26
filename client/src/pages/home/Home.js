@@ -3,22 +3,29 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './Home.css';
 
 const Home = () => {
-	const springVariant = {
-		start: {
-			y: '100%',
-		},
-		end: {
-			y: 0,
-			transition: {
-				type: 'spring',
-				stiffness: 40,
-				damping: 10,
-				restSpeed: 0.5,
-				velocity: 3,
-				restDelta: 0.5,
+		const springVariant = {
+			start: {
+				y: 300,
+				opacity: 0,
 			},
-		},
-	};
+			end: {
+				y: 0,
+				opacity: 1,
+				transition: {
+					type: 'spring',
+					bounce: 0.25,
+					stiffness: 40,
+					damping: 10,
+					restSpeed: 0.5,
+					velocity: 3,
+					restDelta: 0.5,
+				},
+			},
+			exit: {
+				y: -300,
+				opacity: 0,
+			},
+		};
 
 	return (
 		<AnimatePresence exitBeforeEnter>
@@ -27,7 +34,7 @@ const Home = () => {
 				variants={springVariant}
 				initial='start'
 				animate='end'
-				exit={{ y: -10, opacity: 0 }}
+				exit='exit'
 			>
 				<section className='hero'>
 					<div className='hero-text-container'>

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import ReadMoreLess from 'react-show-more-text';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Projects.css';
 
 const Projects = ({ projects, setClickedProject, setReadMore }) => {
@@ -45,12 +45,15 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 
 	const springVariant = {
 		start: {
-			y: '100%',
+			y: -100,
+			opacity: 0
 		},
 		end: {
 			y: 0,
+			opacity: 1,
 			transition: {
 				type: 'spring',
+				bounce: 0.25,
 				stiffness: 40,
 				damping: 10,
 				restSpeed: 0.5,
@@ -58,29 +61,35 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 				restDelta: 0.5,
 			},
 		},
+		exit: {
+			y: 100,
+			opacity: 0,
+		}
 	};
 
 	return (
-		<motion.div
-			className='projects-main-container'
-			variants={springVariant}
-			initial='start'
-			animate='end'
-		>
-			<div className='projects-wrapper'>
-				{projects.map((project, idx) => {
-					const descriptionLines = project.description.split(/\n/);
-					return (
-						<div
-							key={idx}
-							id={idx}
-							className='project-wrapper'
-							onClick={handleClick}
-						>
-							<h4 className='project-title'>{project.title}</h4>
-							<img src={`/images/${project.image}`} alt='' />
-							<span className='tooltip'>Click to view project details</span>
-							{/* <div className='read-more-read-less-wrapper'>
+		<AnimatePresence exitBeforeEnter>
+			<motion.div
+				className='projects-main-container'
+				variants={springVariant}
+				initial='start'
+				animate='end'
+				exit='exit'
+			>
+				<div className='projects-wrapper'>
+					{projects.map((project, idx) => {
+						const descriptionLines = project.description.split(/\n/);
+						return (
+							<div
+								key={idx}
+								id={idx}
+								className='project-wrapper'
+								onClick={handleClick}
+							>
+								<h4 className='project-title'>{project.title}</h4>
+								<img src={`/images/${project.image}`} alt='' />
+								<span className='tooltip'>Click to view project details</span>
+								{/* <div className='read-more-read-less-wrapper'>
 								<ReadMoreLess
 									className='read-more-less content-css'
 									lines={3}
@@ -95,29 +104,30 @@ const Projects = ({ projects, setClickedProject, setReadMore }) => {
 									))}
 								</ReadMoreLess>
 							</div> */}
-							<div className='project-links-wrapper'>
-								<a
-									href={project.repository}
-									target='_blank'
-									rel='noreferrer'
-									className='github-link'
-								>
-									<i className='fa-brands fa-github'></i>&nbsp; GitHub
-								</a>
-								<a
-									href={project.url}
-									target='_blank'
-									rel='noreferrer'
-									className='live-demo-link'
-								>
-									Live Demo
-								</a>
+								<div className='project-links-wrapper'>
+									<a
+										href={project.repository}
+										target='_blank'
+										rel='noreferrer'
+										className='github-link'
+									>
+										<i className='fa-brands fa-github'></i>&nbsp; GitHub
+									</a>
+									<a
+										href={project.url}
+										target='_blank'
+										rel='noreferrer'
+										className='live-demo-link'
+									>
+										Live Demo
+									</a>
+								</div>
 							</div>
-						</div>
-					);
-				})}
-			</div>
-		</motion.div>
+						);
+					})}
+				</div>
+			</motion.div>
+		</AnimatePresence>
 	);
 };
 

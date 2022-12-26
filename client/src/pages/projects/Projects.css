@@ -3,6 +3,10 @@
 	background-color: var(--secondary-background);
 	padding-top: 70px;
 	padding-bottom: 4rem;
+	margin-bottom: 0;
+	position: relative;
+	top: 0;
+	bottom: 48px;
 }
 
 .projects-wrapper {
